@@ -1,0 +1,79 @@
+<ion-view>
+  <ion-nav-title><i class="icon ion-social-buffer "></i> Papel KPI</ion-nav-title>
+  
+  <!-- {"id":"402880e654344b63015434a09ff60443","atraso1a30":9772081.17,"atraso31a60":2059034.99,"atraso61a90":166194.04,"atrasoMax":136,"atrasomas30":3165455.15,"atrasomas91":940226.12,"calendario":{"id":"402880e453f1d5ec0153f1d7aa24000d"},"clave":"TOTAL","facturas":0,"lineaCredito":0.00,"nombre":"TOTAL","plazo":0,"porVencer":48193233.35,"saldo":61130769.67,"vencido":12937536.32,"vencimiento":"FAC"} -->
+  <ion-content>
+    <div class="list card">
+      <div class="item item-divider text-center">
+        Crédito y CxC 
+      </div>
+
+      <div class="item  row">
+        <span class="col"></span>
+        <span class="col">Clientes ({{vm.indicador.atrasoMax}})</span>
+        <span class="col">Participación</span>
+      </div>
+      
+      <div class="item row" >
+        <span class="col">Saldo</span>
+        <span class="col">{{vm.indicador.saldo | number:0}}</span>
+        <span class="col">{{ (vm.indicador.saldo/vm.indicador.saldo) * 100 | number:2}} %</span>
+      </div>
+      <div class="item row" >
+        <span class="col">X Vencer</span>
+        <span class="col">{{vm.indicador.porVencer | number:0}}</span>
+        <span class="col">{{ (vm.indicador.porVencer/vm.indicador.saldo ) * 100 | number:2}} %</span>
+        
+      </div>
+
+      <div class="item row" >
+        <span class="col">Vencido</span>
+        <span class="col">{{vm.indicador.vencido | number:0}}</span>
+        <span class="col">{{ (vm.indicador.vencido/vm.indicador.saldo ) * 100 | number:2}} %</span>
+        
+      </div>
+      <div class="item row" >
+        <span class="col"> 1 a 30 </span>
+        <span class="col">{{vm.indicador.atraso1a30 | number:0}}</span>
+        <span class="col">{{ (vm.indicador.atraso1a30/vm.indicador.saldo ) * 100 | number:2}} %</span>
+      </div>
+      <div class="item row" >
+        <span class="col"> 31 a 60 </span>
+        <span class="col">{{vm.indicador.atraso31a60 | number:0}}</span>
+        <span class="col">{{ (vm.indicador.atraso31a60/vm.indicador.saldo ) * 100 | number:2}} %</span>
+      </div>
+      <div class="item row" >
+        <span class="col"> 61 a 90 </span>
+        <span class="col">{{vm.indicador.atraso61a90 | number:0}}</span>
+        <span class="col">{{ (vm.indicador.atraso61a90/vm.indicador.saldo ) * 100 | number:2}} %</span>
+      </div>
+      <div class="item row" >
+        <span class="col"> > 90 </span>
+        <span class="col">{{vm.indicador.atrasomas91 | number:0}}</span>
+        <span class="col">{{ (vm.indicador.atrasomas91/vm.indicador.saldo ) * 100 | number:2}} %</span>
+      </div>
+      <div class="item row" >
+        <span class="col"> > 30 Meta({{vm.indicador.getMeta()}})</span>
+        <span class="col">{{vm.indicador.atrasomas30 | number:0}}</span>
+        <span class="col">{{ (vm.indicador.atrasomas30/vm.indicador.saldo ) * 100 | number:2}} %</span>
+      </div>
+      <div class="item row" >
+        <span class="col"> Meta (KPI)</span>
+        <span class="col">{{vm.indicador.getKpi() | number:2}}</span>
+      </div>
+      <div class="item row" >
+        <span class="col">  Desviación </span>
+        <span class="col">{{vm.indicador.getDesviacion() | number:2}} %</span>
+      </div>
+      <div class="item row" >
+        <span class="col">  Calificaion </span>
+        <span class="col">{{vm.indicador.getCalifiacion() | number:2}}</span>
+      </div>
+    </div>
+  </ion-content>
+
+  <ion-footer-bar align-title="right" class="bar-dark">
+    <h1 class="title">Semana: {{vm.calendario.semana}} ({{vm.calendario.year}})</h1>
+  </ion-footer-bar>
+  
+</ion-view>

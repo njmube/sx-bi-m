@@ -1,0 +1,83 @@
+<ion-view>
+  <ion-nav-title><i class="icon ion-social-buffer "></i> Papel KPI</ion-nav-title>
+  
+  <ion-content>
+    <div class="list card">
+      <div class="item item-divider text-center">
+       Toneladas
+      </div>
+
+      <div class="item  row">
+        <span class="col"></span>
+        <span class="col">Semana</span>
+        <span class="col">Mes</span>
+        <span class="col">Año</span>
+      </div>
+      <div class="item row">
+        <span class="col">Venta</span>
+        <span class="col">{{vm.indicador.ventaSemanalTon | number:2}}</span>
+        <span class="col">{{vm.indicador.ventaMensualTon | number:2}}</span>
+        <span class="col">{{vm.indicador.ventaAnualTon | number:2}}</span>
+      </div>
+      
+      <div class="item row" >
+        <span class="col">Meta</span>
+        <span class="col">{{vm.indicador.ventaSemanalTonMeta | number:2}}</span>
+        <span class="col">{{vm.indicador.ventaMensualTonMeta | number:2}}</span>
+        <span class="col">{{vm.indicador.ventaAnualTonMeta | number:2}}</span>
+      </div>
+
+      <div class="item row" >
+        <span class="col">Diferencia</span>
+        <span class="col"
+          ng-class="vm.indicador.getDiferenciaVentasTon('semanal')<0?'assertive':''">
+          {{vm.indicador.getDiferenciaVentasTon('semanal') | number:2 }}</span>
+        <span class="col"
+          ng-class="vm.indicador.getDiferenciaVentasTon('mensual')<0?'assertive':''">
+          {{vm.indicador.getDiferenciaVentasTon('mensual') | number:2 }}
+        </span>
+        <span class="col" 
+          ng-class="vm.indicador.getDiferenciaVentasTon('anual')<0?'assertive':''">
+          {{vm.indicador.getDiferenciaVentasTon('anual') | number:2 }}
+        </span>
+      </div>
+
+      <div class="item row" >
+        <span class="col">Desviación</span>
+        <span class="col"
+          ng-class="vm.indicador.getDesviacionVentasTon('semanal')<0?'assertive':''">
+          {{vm.indicador.getDesviacionVentasTon('semanal') | number:2 }} %</span>
+        <span class="col"
+          ng-class="vm.indicador.getDesviacionVentas('mensual')<0?'assertive':''">
+          {{vm.indicador.getDesviacionVentasTon('mensual') | number:2 }} %
+        </span>
+        <span class="col" 
+          ng-class="vm.indicador.getDesviacionVentas('anual')<0?'assertive':''">
+          {{vm.indicador.getDesviacionVentasTon('anual') | number:2}} % 
+        </span>
+      </div>
+
+      
+
+      <div class="item row">
+        <span class="col">KPIs</span>
+        <span class="col">{{vm.indicador.getKpiVentas('semanal') | number : 3}}</span>
+        <span class="col">{{vm.indicador.getKpiVentas('mensual') | number : 3}}</span>
+        <span class="col">{{vm.indicador.getKpiVentas('anual') | number : 3}}</span>
+      </div>
+
+      <div class="item item-avatar">
+        <h2 class="text-center">KPI: {{vm.indicador.getKpiTotalVentas() | number:2}}</h2>
+        
+      </div>
+      
+    </div>
+   
+
+  </ion-content>
+  <ion-footer-bar align-title="center" class="bar-dark">
+    <h1 class="title">Semana: {{vm.calendario.semana}} ({{vm.calendario.year}})</h1>
+    <button class="button button-clear"></button>
+  </ion-footer-bar>
+  
+</ion-view>

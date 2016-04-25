@@ -1,0 +1,58 @@
+<ion-view >
+  <ion-nav-title><i class="icon ion-social-buffer "></i> Papel KPIs</ion-nav-title>
+  
+  <ion-header-bar align-title="left" class="bar-dark bar-subheader">
+    <h1 class="title">Semana: {{vm.calendario.semana}} ({{vm.calendario.year}})</h1>
+    <div class="buttons">
+      <button class="button icon-right ion-ios-calendar "
+      ng-click="vm.openSelector()"></button>
+    </div>
+  </ion-header-bar>
+
+  <ion-content>
+    <ion-list>
+      <ion-item ui-sref="papelKpiResumen({calendarioId:vm.calendario.id})" 
+        class=" item-icon-right" > 
+          Resumen
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+
+      <ion-item ui-sref="papelKpiVentas({semana:vm.calendario.semana})" 
+        class="item-icon-right" > 
+          Ventas 
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+
+      <ion-item ui-sref="cxc-kpi" 
+        class="item-icon-right" > 
+          Ceuntas por cobrar
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+
+      <ion-item ui-sref="enbarques-kpi" 
+        class="item-icon-right" > 
+          Embarques
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+
+      <ion-item ui-sref="inventarios-kpi" 
+        class="item-icon-right" > 
+          Inventarios
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+
+      <ion-item ui-sref="alcances-kpi" 
+        class="item-icon-right" > 
+          Alcances
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+  
+  <ion-footer-bar align-title="left" class="bar-dark">
+    <h3 class="title small">Ultima act:</h3>
+    <button class="button  button-icon ion-ios-reload pull-right"></button>
+  </ion-footer-bar>
+ 
+</ion-view>

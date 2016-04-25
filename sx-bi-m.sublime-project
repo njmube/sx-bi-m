@@ -1,0 +1,38 @@
+{
+	"build_systems":
+	[
+	],
+	"folders":
+	[
+		
+		{
+			"name": "src",
+			"path": "www"
+		},
+		{
+			"name": "scss",
+			"path": "scss"
+		},
+		{
+			"name": "platform-ios",
+			"path": "platforms/ios"
+		},
+		{
+			"name": "platform-android",
+			"path": "platforms/android"
+		},
+		{
+			"name": "plugins",
+			"path": "plugins"
+		},
+		{
+			"name": "RottFoleder",
+			"path": ".",
+			"folder_exclude_patterns": ["www","scss","platforms","plugins"],
+			//"file_exclude_patterns": [".bower*",".e*",".yo*"]
+		}
+	],
+	"settings":
+	{
+	}
+}

@@ -1,0 +1,25 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-calm">
+    <h1 class="title">Selección de calendario</h1>
+    <button class="button button-clear button-primary" ng-click="vm.closeSelector()">
+      Cancelar
+    </button>
+  </ion-header-bar>
+  <ion-content class="">
+    <ion-refresher
+        pulling-text="Cargando calendarios"
+        on-refresh="vm.cargarCalendarios()">
+      </ion-refresher>
+    <div class="list card">
+      <a class="item" ng-repeat="cal in vm.calendarios" ng-click="vm.setCalendario(cal)">
+        Semana: {{cal.semana}} ({{cal.year}}) Fecha: {{cal.fechaFinal | date:'dd-MM-yyyy'}} 
+        <p>
+          Trimestre: {{cal.trimestre}} Dias: {{cal.diasLab}} 
+          Acu mes:{{cal.diaAcumuladoMes}} Dias mes: {{cal.diaMes}}
+        </p>
+        
+      </a>
+
+    </div>
+  </ion-content>
+</ion-modal-view>

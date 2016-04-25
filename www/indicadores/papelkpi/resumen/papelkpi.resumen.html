@@ -1,0 +1,56 @@
+<ion-view>
+  <ion-nav-title><i class="icon ion-social-buffer "></i> Papel BI 1</ion-nav-title>
+ 
+  <ion-nav-buttons side="secondary">
+    <button class="button" ng-click="doSomething()">
+      Ayuda
+    </button>
+  </ion-nav-buttons>
+  
+  <ion-content class="padding">
+    <ion-list>
+      <ion-item class="item-divider text-center">
+        Semana: {{vm.calendario.semana}} ({{vm.calendario.year}})
+      </ion-item>
+      <ion-item class="item-icon-right" ui-sref="kpiResumenToneladas">
+        Toneladas: <span class="badge badge-energized">
+        {{vm.kpi.getKpiTotalVentas() | number:2}}</span>  
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+      
+      <ion-item class="item-icon-right" ui-sref="kpiResumenMargen">
+        Margen: <span class="badge badge-balanced">
+        {{vm.kpi.getKpiTotalMargen() | number:2}}</span>  
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+
+      <ion-item class="item-icon-right" ui-sref="kpiResumenPrecio">
+        Precio x Kg
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+
+      <ion-item class="item-icon-right" ui-sref="kpiResumenTickets">
+        Ticket de venta
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+
+      <ion-item class="item-icon-right" ui-sref="kpiResumenInventarios">
+        Inventarios 
+        <span class="badge badge-balanced">
+        {{vm.kpiInventario.kpi | number:2}}</span>  
+        </span>  
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+
+      <ion-item class="item-icon-right" ui-sref="kpiResumenCxC">
+        Crédito y CxC 
+        <span class="badge badge-balanced"> 
+          {{vm.kpiAtrasoMax.getCalifiacion() | number:2}}
+         </span>  
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+  
+</ion-view>

@@ -1,0 +1,108 @@
+<ion-view>
+  <ion-nav-title><i class="icon ion-social-buffer "></i> Papel KPI</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-clear pull-right icon-right ion-ios-calendar"
+      ng-click="vm.mostrarCalendarios($event)"></button>
+  </ion-nav-buttons>
+  
+  
+  <ion-content>
+    <div class="list card">
+      <div class="item item-divider text-center">
+        {{vm.title}} (Meta: 19%)
+      </div>
+
+      <div class="item  row">
+        <span class="col"></span>
+        <span class="col">Semana</span>
+        <span class="col">Mes</span>
+        <span class="col">Año</span>
+      </div>
+      <div class="item row">
+        <span class="col">Venta</span>
+        <span class="col">{{vm.indicador.ventaSemanal | number:0}}</span>
+        <span class="col">{{vm.indicador.ventaMensual | number:0}}</span>
+        <span class="col">{{vm.indicador.ventaAnual | number:0}}</span>
+      </div>
+      
+      <div class="item row" >
+        <span class="col">Costo</span>
+        <span class="col">{{vm.indicador.costoSemanal | number:0}}</span>
+        <span class="col">{{vm.indicador.costoMensual | number:0}}</span>
+        <span class="col">{{vm.indicador.costoAnual | number:0}}</span>
+      </div>
+
+      <div class="item row" >
+        <span class="col">Utilidad</span>
+        <span class="col"
+          ng-class="vm.indicador.getUtilidad('semanal')<0?'assertive':''">
+          {{vm.indicador.getUtilidad('semanal') | number:0 }}</span>
+        <span class="col"
+          ng-class="vm.indicador.getUtilidad('mensual')<0?'assertive':''">
+          {{vm.indicador.getUtilidad('mensual') | number:0 }}
+        </span>
+        <span class="col" 
+          ng-class="vm.indicador.getUtilidad('anual')<0?'assertive':''">
+          {{vm.indicador.getUtilidad('anual') | number:0 }}
+        </span>
+      </div>
+      <div class="item row" >
+        <span class="col">Margen</span>
+        <span class="col"
+          ng-class="vm.indicador.getMargen('semanal')<0?'assertive':''">
+          {{vm.indicador.getMargen('semanal') | number:2 }} %</span>
+        <span class="col"
+          ng-class="vm.indicador.getMargen('mensual')<0?'assertive':''">
+          {{vm.indicador.getMargen('mensual') | number:0 }} %
+        </span>
+        <span class="col" 
+          ng-class="vm.indicador.getMargen('anual')<0?'assertive':''">
+          {{vm.indicador.getMargen('anual') | number:0 }} %
+        </span>
+      </div>
+      
+      <div class="item row" >
+        <span class="col">Desviación</span>
+        <span class="col"
+          ng-class="vm.indicador.getDesviacionMargen('semanal')<0?'assertive':''">
+          {{vm.indicador.getDesviacionMargen('semanal') | number:2 }} %</span>
+        <span class="col"
+          ng-class="vm.indicador.getDesviacionMargen('mensual')<0?'assertive':''">
+          {{vm.indicador.getDesviacionMargen('mensual') | number:2 }} %
+        </span>
+        <span class="col" 
+          ng-class="vm.indicador.getDesviacionMargen('anual')<0?'assertive':''">
+          {{vm.indicador.getDesviacionMargen('anual') | number:2}} % 
+        </span>
+      </div>
+
+      <div class="item row">
+        <span class="col">KPIs META</span>
+        <span class="col">{{vm.indicador.kpiSemanal | number : 3}}</span>
+        <span class="col">{{vm.indicador.kpiMensual | number : 3}}</span>
+        <span class="col">{{vm.indicador.kpiAnual | number : 3}}</span>
+      </div>
+
+      <div class="item row">
+        <span class="col">KPIs</span>
+        <span class="col">{{vm.indicador.getKpiMargen('semanal') | number : 3}}</span>
+        <span class="col">{{vm.indicador.getKpiMargen('mensual') | number : 3}}</span>
+        <span class="col">{{vm.indicador.getKpiMargen('anual') | number : 3}}</span>
+      </div>
+     
+      <div class="item item-avatar">
+        <h2 class="text-center">KPI: {{vm.indicador.getKpiTotalMargen() | number:2}}</h2>
+        
+      </div>
+      
+    </div>
+   
+
+  </ion-content>
+  <ion-footer-bar align-title="right" class="bar-stable">
+    
+    <h1 class="title">Sem: {{vm.calendario.semana}} ({{vm.calendario.year}})</h1>
+    <button class="button button-clear"></button>
+  </ion-footer-bar>
+  
+</ion-view>

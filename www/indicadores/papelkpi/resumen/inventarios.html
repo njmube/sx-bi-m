@@ -1,0 +1,55 @@
+<ion-view>
+  <ion-nav-title><i class="icon ion-social-buffer "></i> Papel KPI</ion-nav-title>
+  
+  
+  <ion-content>
+    <div class="list card">
+      
+      <div class="item item-divider text-center">
+        Inventarios
+      </div>
+
+      <div class="item  row">
+        <span class="col"></span>
+        <span class="col">Ton</span>
+        <span class="col">Mín</span>
+        <span class="col">Meta</span>
+        <span class="col">Msc</span>
+        <span class="col">Desv</span>
+        <span class="col">KPI</span>
+      </div>
+      <div class="item  row">
+        <span class="col">Total</span>
+        <span class="col">{{vm.indicador.existencias}}</span>
+        <span class="col">{{vm.indicador.minimo}}</span>
+        <span class="col">{{vm.indicador.meta}}</span>
+        <span class="col">{{vm.indicador.maximo}}</span>
+        <span class="col">{{vm.indicador.desviacion}}</span>
+        <span class="col">{{vm.indicador.kpi}}</span>
+      </div>
+      
+      <div class="item item-divider text-center">
+        Alcances
+      </div>
+      <div class="item  row">
+        <span class="col"></span>
+        <span class="col">Nacional</span>
+        <span class="col">Importado</span>
+        
+      </div>
+      <div class="item  row">
+        <span class="col">Total</span>
+        <span class="col">{{vm.indicador.existencias}}</span>
+        <span class="col">{{vm.indicador.minimo}}</span>
+      </div>
+    </div>
+   
+
+  </ion-content>
+  <ion-footer-bar align-title="right" class="bar-dark">
+    
+    <h1 class="title">Semana: {{vm.calendario.semana}} ({{vm.calendario.year}})</h1>
+    <button class="button button-clear"></button>
+  </ion-footer-bar>
+  
+</ion-view>
