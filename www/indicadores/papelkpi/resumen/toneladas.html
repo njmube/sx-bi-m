@@ -1,13 +1,17 @@
 <ion-view>
   <ion-nav-title><i class="icon ion-social-buffer "></i> Papel KPI</ion-nav-title>
   
-  <ion-content>
-    <div class="list card">
-      <div class="item item-divider text-center">
-       Toneladas
-      </div>
+  <div class="bar bar-subheader bar-dark">
+    <h1 class="title">Toneladas</h1>
+  </div>
 
-      <div class="item  row">
+  <ion-content class="has-subheader">
+    <div class="list">
+      <!-- <div class="item item-divider text-center">
+       Toneladas
+      </div> -->
+
+      <div class="item  row text-center">
         <span class="col"></span>
         <span class="col">Semana</span>
         <span class="col">Mes</span>
@@ -15,60 +19,62 @@
       </div>
       <div class="item row">
         <span class="col">Venta</span>
-        <span class="col">{{vm.indicador.ventaSemanalTon | number:2}}</span>
-        <span class="col">{{vm.indicador.ventaMensualTon | number:2}}</span>
-        <span class="col">{{vm.indicador.ventaAnualTon | number:2}}</span>
+        <span class="col text-right">{{vm.indicador.ventaSemanalTon | number:0}}</span>
+        <span class="col text-right">{{vm.indicador.ventaMensualTon | number:0}}</span>
+        <span class="col text-right">{{vm.indicador.ventaAnualTon | number:0}}</span>
       </div>
       
       <div class="item row" >
         <span class="col">Meta</span>
-        <span class="col">{{vm.indicador.ventaSemanalTonMeta | number:2}}</span>
-        <span class="col">{{vm.indicador.ventaMensualTonMeta | number:2}}</span>
-        <span class="col">{{vm.indicador.ventaAnualTonMeta | number:2}}</span>
+        <span class="col text-right">{{vm.indicador.ventaSemanalTonMeta | number:0}}</span>
+        <span class="col text-right">{{vm.indicador.ventaMensualTonMeta | number:0}}</span>
+        <span class="col text-right">{{vm.indicador.ventaAnualTonMeta | number:0}}</span>
       </div>
 
       <div class="item row" >
         <span class="col">Diferencia</span>
-        <span class="col"
+        <span class="col text-right"
           ng-class="vm.indicador.getDiferenciaVentasTon('semanal')<0?'assertive':''">
-          {{vm.indicador.getDiferenciaVentasTon('semanal') | number:2 }}</span>
-        <span class="col"
+          {{vm.indicador.getDiferenciaVentasTon('semanal') | number:0 }}</span>
+        <span class="col text-right"
           ng-class="vm.indicador.getDiferenciaVentasTon('mensual')<0?'assertive':''">
-          {{vm.indicador.getDiferenciaVentasTon('mensual') | number:2 }}
+          {{vm.indicador.getDiferenciaVentasTon('mensual') | number:0 }}
         </span>
-        <span class="col" 
+        <span class="col text-right" 
           ng-class="vm.indicador.getDiferenciaVentasTon('anual')<0?'assertive':''">
-          {{vm.indicador.getDiferenciaVentasTon('anual') | number:2 }}
+          {{vm.indicador.getDiferenciaVentasTon('anual') | number:0 }}
         </span>
       </div>
 
       <div class="item row" >
         <span class="col">Desviación</span>
-        <span class="col"
+        <span class="col text-right"
           ng-class="vm.indicador.getDesviacionVentasTon('semanal')<0?'assertive':''">
           {{vm.indicador.getDesviacionVentasTon('semanal') | number:2 }} %</span>
-        <span class="col"
+        <span class="col text-right"
           ng-class="vm.indicador.getDesviacionVentas('mensual')<0?'assertive':''">
           {{vm.indicador.getDesviacionVentasTon('mensual') | number:2 }} %
         </span>
-        <span class="col" 
+        <span class="col text-right" 
           ng-class="vm.indicador.getDesviacionVentas('anual')<0?'assertive':''">
           {{vm.indicador.getDesviacionVentasTon('anual') | number:2}} % 
         </span>
       </div>
 
-      
-
-      <div class="item row">
-        <span class="col">KPIs</span>
-        <span class="col">{{vm.indicador.getKpiVentas('semanal') | number : 3}}</span>
-        <span class="col">{{vm.indicador.getKpiVentas('mensual') | number : 3}}</span>
-        <span class="col">{{vm.indicador.getKpiVentas('anual') | number : 3}}</span>
+      <div class="item item-divider text-center">
+       Calificación
       </div>
 
-      <div class="item item-avatar">
-        <h2 class="text-center">KPI: {{vm.indicador.getKpiTotalVentas() | number:2}}</h2>
-        
+      <div class="item row">
+        <span class="col">Ponderada</span>
+        <span class="col text-right">{{vm.indicador.getKpiVentas('semanal') | number : 3}}</span>
+        <span class="col text-right">{{vm.indicador.getKpiVentas('mensual') | number : 3}}</span>
+        <span class="col text-right">{{vm.indicador.getKpiVentas('anual') | number : 3}}</span>
+      </div>
+
+      <div class="item row">
+        <span class="col">Total</span>
+        <span class="col text-right">{{vm.indicador.getKpiTotalVentas() | number:2}}</span>
       </div>
       
     </div>

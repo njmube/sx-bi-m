@@ -1,55 +1,57 @@
 <ion-view>
   <ion-nav-title><i class="icon ion-social-buffer "></i> Papel KPI</ion-nav-title>
   
-  <ion-content>
-    <div class="list card">
+  <div class="bar bar-subheader bar-dark">
+    <h1 class="title">Margen (Meta: 19%)</h1>
+  </div>
+
+  <ion-content class="has-subheader">
+    <div class="list">
       <div class="item item-divider text-center">
         Precio por Kg.
       </div>
 
       <div class="item  row">
         <span class="col"></span>
-        <span class="col">Semana</span>
-        <span class="col">Mes</span>
-        <span class="col">Año</span>
+        <span class="col text-center">Semana</span>
+        <span class="col text-center">Mes</span>
+        <span class="col text-center">Año</span>
       </div>
 
       <div class="item row" >
         <span class="col">Costo</span>
-        <span class="col">{{vm.indicador.getCostoKg('semanal') | number:2}}</span>
-        <span class="col">{{vm.indicador.getCostoKg('mensual') | number:2}}</span>
-        <span class="col">{{vm.indicador.getCostoKg('anual') | number:2}}</span>
+        <span class="col text-right">{{vm.indicador.getCostoKg('semanal') | number:2}}</span>
+        <span class="col text-right">{{vm.indicador.getCostoKg('mensual') | number:2}}</span>
+        <span class="col text-right">{{vm.indicador.getCostoKg('anual') | number:2}}</span>
       </div>
 
       <div class="item row" >
         <span class="col">Precio</span>
-        <span class="col">{{vm.indicador.getPrecioKg('semanal') | number:2}}</span>
-        <span class="col">{{vm.indicador.getPrecioKg('mensual') | number:2}}</span>
-        <span class="col">{{vm.indicador.getPrecioKg('anual') | number:2}}</span>
+        <span class="col text-right">{{vm.indicador.getPrecioKg('semanal') | number:2}}</span>
+        <span class="col text-right">{{vm.indicador.getPrecioKg('mensual') | number:2}}</span>
+        <span class="col text-right">{{vm.indicador.getPrecioKg('anual') | number:2}}</span>
       </div>
 
       <div class="item row" >
         <span class="col">Meta</span>
-        <span class="col">{{vm.indicador.getMetaPrecioKg('semanal') | number:2}}</span>
-        <span class="col">{{vm.indicador.getMetaPrecioKg('mensual') | number:2}}</span>
-        <span class="col">{{vm.indicador.getMetaPrecioKg('anual') | number:2}}</span>
+        <span class="col text-right">{{vm.indicador.getMetaPrecioKg('semanal') | number:2}}</span>
+        <span class="col text-right">{{vm.indicador.getMetaPrecioKg('mensual') | number:2}}</span>
+        <span class="col text-right">{{vm.indicador.getMetaPrecioKg('anual') | number:2}}</span>
       </div>
 
       <div class="item row" >
         <span class="col">Dif (%)</span>
-        <span class="col">{{vm.indicador.getDesviacionPrecio('semanal') | number:2}}%</span>
-        <span class="col">{{vm.indicador.getDesviacionPrecio('mensual') | number:2}}%</span>
-        <span class="col">{{vm.indicador.getDesviacionPrecio('anual') | number:2}}%</span>
+        <span class="col text-right">{{vm.indicador.getDesviacionPrecio('semanal') | number:2}}%</span>
+        <span class="col text-right">{{vm.indicador.getDesviacionPrecio('mensual') | number:2}}%</span>
+        <span class="col text-right">{{vm.indicador.getDesviacionPrecio('anual') | number:2}}%</span>
       </div>
       
     </div>
    
 
   </ion-content>
-  <ion-footer-bar align-title="right" class="bar-stable">
-    
+  <ion-footer-bar align-title="center" class="bar-dark">
     <h1 class="title">Semana: {{vm.calendario.semana}} ({{vm.calendario.year}})</h1>
-    <button class="button button-clear"></button>
   </ion-footer-bar>
   
 </ion-view>
