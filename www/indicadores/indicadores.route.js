@@ -125,21 +125,6 @@
             controllerAs: 'vm'
           }
         }
-      })
-
-      .state('papelKpiVentas', {
-        parent: 'papelkpiParent',
-        url: '/ventas',
-        views: {
-          'indicadores@app': {
-            templateUrl: 'indicadores/papelkpi/ventas/ventas.html',
-            controller: ['semana',function(semana) {
-              var vm = this;
-              vm.semana = semana;
-            }],
-            controllerAs: 'vm'
-          }
-        }
       });
 
       //$urlRouterProvider.when('/  papelkpis','/papelkpis/list')
