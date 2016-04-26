@@ -23,6 +23,24 @@
           <p>{{v.venta/v.toneladas | number:2}}</p>
         </div>
       </div>
+      
+      <div class="item row text-right" ng-repeat="v in vm.ventaSemCre">
+        <div class="col text-left">
+          <p>{{v.tipo}} </p>
+        </div>
+        <div class="col">
+          <p>{{v.toneladas | number:0}}</p>
+        </div>
+        <div class="col">
+          <p>{{v.venta | number:0 }}</p>
+        </div>
+        <div class="col">
+          <p>{{v.participacion| number:2 }}</p>
+        </div>
+        <div class="col">
+          <p>{{v.precio | number:2}}</p>
+        </div>
+      </div>
 
       <div class="item item-divider text-center"><p>Mes: {{vm.calendario.mes}}</p></div>
       <div class="item row text-right" ng-repeat="v in vm.ventas | filterBy: ['tipo']: 'MES'">
@@ -36,7 +54,7 @@
           <p>{{v.venta | number:0 }}</p>
         </div>
         <div class="col">
-          <p>%</p>
+          <p>{{v.participacion| number:0 }}</p>
         </div>
         <div class="col">
           <p>{{v.venta/v.toneladas | number:2}}</p>
