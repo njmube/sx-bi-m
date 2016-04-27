@@ -1,88 +1,161 @@
 <ion-view>
   <ion-nav-title><i class="icon ion-social-buffer "></i> Papel BI 1</ion-nav-title>
- <div class="bar bar-subheader bar-dark">
-   <h1 class="title">KPI Ventas</h1>
- </div>
+  <div class="bar bar-subheader bar-dark">
+    <h1 class="title">KPI Ventas</h1>   
+  </div>
+
   <ion-content class="has-subheader">
-    <div class="list">
-      <div class="item item-divider text-center"><p>Semana: {{vm.calendario.semana}}</p></div>
-      <div class="item row text-right" ng-repeat="v in vm.ventas | filterBy: ['tipo']: 'SEM'">
-        <div class="col text-left">
-          <p>{{v.sucursal | truncate: 8: ' '}} </p>
-        </div>
-        <div class="col">
-          <p>{{v.toneladas | number:0}}</p>
-        </div>
-        <div class="col">
-          <p>{{v.venta | number:0 }}</p>
-        </div>
-        <div class="col">
-          <p>%</p>
-        </div>
-        <div class="col">
-          <p>{{v.venta/v.toneladas | number:2}}</p>
-        </div>
-      </div>
+    <ion-slides  options="vm.options" slider="vm.data.slider">
       
-      <div class="item row text-right" ng-repeat="v in vm.ventaSemCre">
-        <div class="col text-left">
-          <p>{{v.tipo}} </p>
+      <ion-slide-page>
+        <div class="list">
+          <div class="item item-divider text-center"><p>Semana: {{vm.calendario.semana}}</p></div>
+          <div class="row">
+            <div class="col text-center">Suc</div>
+            <div class="col text-center">Toneladas</div>
+            <div class="col text-center">Part</div>
+            <div class="col text-center">Venta</div>
+            <div class="col text-center">Precio</div>
+          </div>
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorSemana">
+            <div class="col text-left">
+              <p>{{v.sucursal | truncate: 8: ' '}} </p>
+            </div>
+            <div class="col">
+              <p>{{v.toneladas | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.participacion | number:2}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.venta | number:0 }}</p>
+            </div>
+            
+            <div class="col">
+              <p>{{v.precio | number:2}}</p>
+            </div>
+          </div>
+          <div class="item row text-right" ng-repeat="v in vm.resumenPorSemana">
+            <div class="col text-left">
+              <p>{{v.tipo}} </p>
+            </div>
+            <div class="col">
+              <p>{{v.toneladas | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.venta | number:0 }}</p>
+            </div>
+            <div class="col">
+              <p>{{v.getParticipacion() | number:2 }}</p>
+            </div>
+            <div class="col strong">
+              <p>{{v.getPrecio() | number:2}}</p>
+            </div>
+          </div>
         </div>
-        <div class="col">
-          <p>{{v.toneladas | number:0}}</p>
-        </div>
-        <div class="col">
-          <p>{{v.venta | number:0 }}</p>
-        </div>
-        <div class="col">
-          <p>{{v.participacion| number:2 }}</p>
-        </div>
-        <div class="col">
-          <p>{{v.precio | number:2}}</p>
-        </div>
-      </div>
+      </ion-slide-page>
 
-      <div class="item item-divider text-center"><p>Mes: {{vm.calendario.mes}}</p></div>
-      <div class="item row text-right" ng-repeat="v in vm.ventas | filterBy: ['tipo']: 'MES'">
-        <div class="col text-left">
-          <p>{{v.sucursal | truncate: 8: ' '}} </p>
+      <ion-slide-page>
+        <div class="list">
+          <div class="item item-divider text-center"><p>Mes: {{vm.calendario.mes}}</p></div>
+          <div class="row">
+            <div class="col text-center">Suc</div>
+            <div class="col text-center">Toneladas</div>
+            <div class="col text-center">Part</div>
+            <div class="col text-center">Venta</div>
+            <div class="col text-center">Precio</div>
+          </div>
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.ventasPorMes">
+            <div class="col text-left">
+              <p>{{v.sucursal | truncate: 8: ' '}} </p>
+            </div>
+            <div class="col">
+              <p>{{v.toneladas | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.participacion | number:2}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.venta | number:0 }}</p>
+            </div>
+            
+            <div class="col">
+              <p>{{v.precio | number:2}}</p>
+            </div>
+          </div>
+          
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorMes">
+            <div class="col text-left">
+              <p>{{v.tipo}} </p>
+            </div>
+            <div class="col">
+              <p>{{v.toneladas | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.venta | number:0 }}</p>
+            </div>
+            <div class="col">
+              <p>{{v.getParticipacion() | number:2 }}</p>
+            </div>
+            <div class="col strong">
+              <p>{{v.getPrecio() | number:2}}</p>
+            </div>
+          </div>   
         </div>
-        <div class="col">
-          <p>{{v.toneladas | number:0}}</p>
+      </ion-slide-page>
+      
+      <ion-slide-page>
+        <div class="list">
+          <div class="item item-divider text-center"><p>YTD: {{vm.calendario.year}}</p></div>
+          <div class="row">
+            <div class="col text-center">Suc</div>
+            <div class="col text-center">Toneladas</div>
+            <div class="col text-center">Part</div>
+            <div class="col text-center">Venta</div>
+            <div class="col text-center">Precio</div>
+          </div>
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.ventasPorAno">
+            <div class="col text-left">
+              <p>{{v.sucursal | truncate: 8: ' '}} </p>
+            </div>
+            <div class="col">
+              <p>{{v.toneladas | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.participacion | number:2}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.venta | number:0 }}</p>
+            </div>
+            
+            <div class="col">
+              <p>{{v.precio | number:2}}</p>
+            </div>
+          </div>
+          
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorAno">
+            <div class="col text-left">
+              <p>{{v.tipo}} </p>
+            </div>
+            <div class="col">
+              <p>{{v.toneladas | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.venta | number:0 }}</p>
+            </div>
+            <div class="col">
+              <p>{{v.getParticipacion() | number:2 }}</p>
+            </div>
+            <div class="col strong">
+              <p>{{v.getPrecio() | number:2}}</p>
+            </div>
+          </div>  
         </div>
-        <div class="col">
-          <p>{{v.venta | number:0 }}</p>
-        </div>
-        <div class="col">
-          <p>{{v.participacion| number:0 }}</p>
-        </div>
-        <div class="col">
-          <p>{{v.venta/v.toneladas | number:2}}</p>
-        </div>
-      </div>
+      </ion-slide-page>
 
-      <div class="item item-divider text-center"><p>YTD: {{vm.calendario.year}}</p></div>
-      <div class="item row text-right" ng-repeat="v in vm.ventas | filterBy: ['tipo']: 'YEAR'">
-        <div class="col text-left">
-          <p>{{v.sucursal | truncate: 8: ' '}} </p>
-        </div>
-        <div class="col">
-          <p>{{v.toneladas | number:0}}</p>
-        </div>
-        <div class="col">
-          <p>{{v.venta | number:0 }}</p>
-        </div>
-        <div class="col">
-          <p>%</p>
-        </div>
-        <div class="col">
-          <p>{{v.venta/v.toneladas | number:2}}</p>
-        </div>
-      </div>
-
-    </div>
-  <!-- <ion-footer-bar align-title="center" class="bar-dark">
-    <h1 class="title">Semana: {{vm.calendario.semana}} ({{vm.calendario.year}})</h1>
-  </ion-footer-bar> -->
+    </ion-slides>
+    
+  </ion-content>
+  
   
 </ion-view>
