@@ -1,0 +1,165 @@
+<ion-view>
+  <ion-nav-title><i class="icon ion-social-buffer "></i> Papel BI 1</ion-nav-title>
+  <div class="bar bar-subheader bar-dark">
+    <h1 class="title">KPI Ventas</h1>   
+  </div>
+
+  <ion-content class="has-subheader">
+    <ion-slides  options="vm.options" slider="vm.data.slider">
+      
+      <ion-slide-page>
+        <div class="list">
+          <div class="item item-divider text-center"><p>Semana: {{vm.calendario.semana}}</p></div>
+          <div class="row">
+            <div class="col text-center">Suc</div>
+            <div class="col text-center">Ventas</div>
+            <div class="col text-center">Costo</div>
+            <div class="col text-center">Utilidad</div>
+            <div class="col text-center">Margen</div>
+          </div>
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorSemana">
+            <div class="col text-left">
+              <p>{{v.sucursal | truncate: 8: ' '}} </p>
+            </div>
+            <div class="col">
+              <p>{{v.venta | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.costo | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.utilidad | number:0 }}</p>
+            </div>
+            
+            <div class="col">
+              <p>{{v.utilidadPorcentaje | number:2}}</p>
+            </div>
+          </div>
+          <!-- Rresumen por segmento -->
+          <div class="item item-divider text-center"><p>Resumen</p></div>
+          <div class="item row text-right" ng-repeat="v in vm.resumenPorSemana">
+            <div class="col text-left">
+              <p>{{v.tipo}} </p>
+            </div>
+            <div class="col">
+              <p>{{v.venta | number:0 }}</p>
+            </div>
+            <div class="col">
+              <p>{{v.costo | number:0 }}</p>
+            </div>
+            <div class="col">
+              <p>{{v.getUtilidad() | number:0 }}</p>
+            </div>
+            <div class="col">
+              <p>{{v.getMargen() | number:2}}</p>
+            </div>
+          </div>
+        </div>
+      </ion-slide-page>
+      
+      <ion-slide-page>
+        <div class="list">
+          <div class="item item-divider text-center"><p>Mes: {{vm.calendario.mes}}</p></div>
+          <div class="row">
+            <div class="col text-center">Suc</div>
+            <div class="col text-center">Ventas</div>
+            <div class="col text-center">Costo</div>
+            <div class="col text-center">Utilidad</div>
+            <div class="col text-center">Margen</div>
+          </div>
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.ventasPorMes">
+            <div class="col text-left">
+              <p>{{v.sucursal | truncate: 8: ' '}} </p>
+            </div>
+            <div class="col">
+              <p>{{v.venta | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.costo | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.utilidad | number:0 }}</p>
+            </div>
+            
+            <div class="col">
+              <p>{{v.utilidadPorcentaje | number:2}}</p>
+            </div>
+          </div>
+          <!-- Rresumen por segmento -->
+          <div class="item item-divider text-center"><p>Resumen</p></div>
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorMes">
+            <div class="col text-left">
+              <p>{{v.tipo}} </p>
+            </div>
+            <div class="col">
+              <p>{{v.venta | number:0 }}</p>
+            </div>
+            <div class="col">
+              <p>{{v.costo | number:0 }}</p>
+            </div>
+            <div class="col">
+              <p>{{v.getUtilidad() | number:0 }}</p>
+            </div>
+            <div class="col">
+              <p>{{v.getMargen() | number:2}}</p>
+            </div>
+          </div>
+        </div>
+      </ion-slide-page>
+
+      <ion-slide-page>
+        <div class="list">
+          <div class="item item-divider text-center"><p>Ejercicio: {{vm.calendario.year}}</p></div>
+          <div class="row">
+            <div class="col text-center">Suc</div>
+            <div class="col text-center">Ventas</div>
+            <div class="col text-center">Costo</div>
+            <div class="col text-center">Utilidad</div>
+            <div class="col text-center">Margen</div>
+          </div>
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.ventasPorAno">
+            <div class="col text-left">
+              <p>{{v.sucursal | truncate: 8: ' '}} </p>
+            </div>
+            <div class="col">
+              <p>{{v.venta | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.costo | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{v.utilidad | number:0 }}</p>
+            </div>
+            
+            <div class="col">
+              <p>{{v.utilidadPorcentaje | number:2}}</p>
+            </div>
+          </div>
+          <!-- Rresumen por segmento -->
+          <div class="item item-divider text-center"><p>Resumen</p></div>
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorAno">
+            <div class="col text-left">
+              <p>{{v.tipo}} </p>
+            </div>
+            <div class="col">
+              <p>{{v.venta | number:0 }}</p>
+            </div>
+            <div class="col">
+              <p>{{v.costo | number:0 }}</p>
+            </div>
+            <div class="col">
+              <p>{{v.getUtilidad() | number:0 }}</p>
+            </div>
+            <div class="col">
+              <p>{{v.getMargen() | number:2}}</p>
+            </div>
+          </div>
+        </div>
+      </ion-slide-page>
+
+    </ion-slides>
+    
+  </ion-content>
+  
+  
+</ion-view>

@@ -50,7 +50,6 @@
 
       this.ventasPorAno = getVentasPorSegmento(ventas,'YEAR');
       this.resumenPorAno = getVentasPorTipoDePago(ventas,'YEAR');
-
     }
 
     function getVentasPorSegmento(ventas,segmento){
@@ -75,20 +74,30 @@
       var con = new VentaKpiRow('CON'); 
       var total = new VentaKpiRow('Total');
       
-      var toneladas = 0.0
+      var toneladas = 0.0;
+      
+
       for (var i = ventas.length - 1; i >= 0; i--) {
 
         if(ventas[i].tipo === tipo ){
+          
           toneladas += ventas[i].toneladas;
+          
           cre.toneladas += ventas[i].toneladasCre;
-          cre.venta += ventas[i].ventaCre
+          cre.venta += ventas[i].ventaCre;
+          cre.costo += ventas[i].costoCre;
+          
           con.toneladas += ventas[i].toneladasCon;
           con.venta += ventas[i].ventaCon;
+          con.costo += ventas[i].costoCon;
           
           total.toneladas += ventas[i].toneladas;
           total.venta += ventas[i].venta;
+          total.costo += ventas[i].costo;
+          
         }
       }
+
       cre.total = toneladas;
       con.total = toneladas;
       total.total = toneladas;
@@ -99,6 +108,8 @@
 
       return res;
     }
+
+    
 
   }
 

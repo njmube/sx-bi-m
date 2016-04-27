@@ -11,6 +11,9 @@
     this.toneladas = toneladas | 0;
     this.venta = venta | 0;
     this.total = total | 0;
+    this.costo = 0;
+    this.utilidad = 0;
+    
   };
 
   VentaKpiRow.prototype.getParticipacion = function() {
@@ -25,6 +28,15 @@
     }
     return 0;
     
+  }
+  VentaKpiRow.prototype.getUtilidad = function() {
+    return this.venta - this.costo;
+  }
+  VentaKpiRow.prototype.getMargen = function() {
+    if(this.venta > 0) {
+      return (this.getUtilidad() / this.venta) * 100;
+    }
+    return 0;
   }
 
 })();
