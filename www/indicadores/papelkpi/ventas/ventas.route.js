@@ -41,6 +41,18 @@
             controllerAs: 'vm'
           }
         }
+      })
+
+      .state('papelKpiVentasTickets', {
+        parent: 'papelkpiParent',
+        url: '/ventas',
+        views: {
+          'indicadores@app': {
+            templateUrl: 'indicadores/papelkpi/ventas/ventaskpi.tickets.html',
+            controller: 'PapelKpiVentasController',
+            controllerAs: 'vm'
+          }
+        }
       });
   }
 

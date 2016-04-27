@@ -35,6 +35,7 @@
               <p>{{v.precio | number:2}}</p>
             </div>
           </div>
+          <div class="item item-divider text-center"><p>Resumen</p></div>
           <div class="item row text-right" ng-repeat="v in vm.resumenPorSemana">
             <div class="col text-left">
               <p>{{v.tipo}} </p>
@@ -83,7 +84,8 @@
               <p>{{v.precio | number:2}}</p>
             </div>
           </div>
-          
+
+           <div class="item item-divider text-center"><p>Resumen</p></div>
           <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorMes">
             <div class="col text-left">
               <p>{{v.tipo}} </p>
@@ -133,6 +135,7 @@
             </div>
           </div>
           
+          <div class="item item-divider text-center"><p>Resumen</p></div>
           <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorAno">
             <div class="col text-left">
               <p>{{v.tipo}} </p>

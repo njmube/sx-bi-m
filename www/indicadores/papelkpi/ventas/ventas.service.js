@@ -86,15 +86,23 @@
           cre.toneladas += ventas[i].toneladasCre;
           cre.venta += ventas[i].ventaCre;
           cre.costo += ventas[i].costoCre;
+          cre.facturas += ventas[i].facturasCre;
+          cre.devoluciones += ventas[i].devolucionesCre;
+          cre.canceladas += ventas[i].canceladasCre;
           
           con.toneladas += ventas[i].toneladasCon;
           con.venta += ventas[i].ventaCon;
           con.costo += ventas[i].costoCon;
+          con.facturas += ventas[i].facturasCon;
+          con.devoluciones += ventas[i].devolucionesCon;
+          con.canceladas += ventas[i].canceladasCon;
           
           total.toneladas += ventas[i].toneladas;
           total.venta += ventas[i].venta;
           total.costo += ventas[i].costo;
-          
+          total.facturas += ventas[i].facturas;
+          total.devoluciones += ventas[i].devoluciones;
+          total.canceladas += ventas[i].canceladas;
         }
       }
 

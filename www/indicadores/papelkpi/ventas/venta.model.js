@@ -13,6 +13,9 @@
     this.total = total | 0;
     this.costo = 0;
     this.utilidad = 0;
+    this.facturas = 0;
+    this.canceladas = 0;
+    this.devoluciones = 0;
     
   };
 
