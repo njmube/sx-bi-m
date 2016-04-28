@@ -1,7 +1,7 @@
 <ion-view>
   <ion-nav-title><i class="icon ion-social-buffer "></i> Papel BI 1</ion-nav-title>
   <div class="bar bar-subheader bar-dark">
-    <h1 class="title">KPI Ventas</h1>   
+    <h1 class="title">KPI Ventas (Toneladas)</h1>   
   </div>
 
   <ion-content class="has-subheader">
@@ -13,9 +13,9 @@
           <div class="row">
             <div class="col text-center">Suc</div>
             <div class="col text-center">Toneladas</div>
-            <div class="col text-center">Part</div>
+            <div class="col text-right">Part</div>
             <div class="col text-center">Venta</div>
-            <div class="col text-center">Precio</div>
+            <div class="col text-right">Precio</div>
           </div>
           <div class="item row text-right" ng-repeat="v in vm.ventasPorSemana">
             <div class="col text-left">
@@ -36,9 +36,10 @@
             </div>
           </div>
           <div class="item item-divider text-center"><p>Resumen</p></div>
-          <div class="item row text-right" ng-repeat="v in vm.resumenPorSemana">
+          <div class="item row text-right" ng-repeat="v in vm.resumenPorSemana"
+            ng-class="{'total':v.tipo ==='Total'}">
             <div class="col text-left">
-              <p>{{v.tipo}} </p>
+              <p>{{v.tipo}}</p>
             </div>
             <div class="col">
               <p>{{v.toneladas | number:0}}</p>
@@ -49,7 +50,7 @@
             <div class="col">
               <p>{{v.getParticipacion() | number:2 }}</p>
             </div>
-            <div class="col strong">
+            <div class="col ">
               <p>{{v.getPrecio() | number:2}}</p>
             </div>
           </div>
@@ -86,7 +87,8 @@
           </div>
 
            <div class="item item-divider text-center"><p>Resumen</p></div>
-          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorMes">
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorMes"
+            ng-class="{'total':v.tipo ==='Total'}">
             <div class="col text-left">
               <p>{{v.tipo}} </p>
             </div>
@@ -136,7 +138,8 @@
           </div>
           
           <div class="item item-divider text-center"><p>Resumen</p></div>
-          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorAno">
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorAno"
+            ng-class="{'total':v.tipo ==='Total'}">
             <div class="col text-left">
               <p>{{v.tipo}} </p>
             </div>

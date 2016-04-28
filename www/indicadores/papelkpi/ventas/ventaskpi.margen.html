@@ -1,7 +1,7 @@
 <ion-view>
   <ion-nav-title><i class="icon ion-social-buffer "></i> Papel BI 1</ion-nav-title>
   <div class="bar bar-subheader bar-dark">
-    <h1 class="title">KPI Ventas</h1>   
+    <h1 class="title">KPI Ventas (Margen)</h1>   
   </div>
 
   <ion-content class="has-subheader">
@@ -37,7 +37,8 @@
           </div>
           <!-- Rresumen por segmento -->
           <div class="item item-divider text-center"><p>Resumen</p></div>
-          <div class="item row text-right" ng-repeat="v in vm.resumenPorSemana">
+          <div class="item row text-right" ng-repeat="v in vm.resumenPorSemana"
+            ng-class="{'total':v.tipo ==='Total'}">
             <div class="col text-left">
               <p>{{v.tipo}} </p>
             </div>
@@ -87,7 +88,8 @@
           </div>
           <!-- Rresumen por segmento -->
           <div class="item item-divider text-center"><p>Resumen</p></div>
-          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorMes">
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorMes"
+            ng-class="{'total':v.tipo ==='Total'}">
             <div class="col text-left">
               <p>{{v.tipo}} </p>
             </div>
@@ -137,7 +139,8 @@
           </div>
           <!-- Rresumen por segmento -->
           <div class="item item-divider text-center"><p>Resumen</p></div>
-          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorAno">
+          <div class="item row text-right" ng-repeat="v in vm.ventasPorCalendario.resumenPorAno"
+            ng-class="{'total':v.tipo ==='Total'}">
             <div class="col text-left">
               <p>{{v.tipo}} </p>
             </div>

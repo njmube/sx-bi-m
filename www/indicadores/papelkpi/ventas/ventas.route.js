@@ -16,6 +16,11 @@
         views: {
           'indicadores@app': {
             templateUrl: 'indicadores/papelkpi/ventas/ventaskpi.home.html',
+            controller: ['calendario',function(calendario) {
+              var vm = this;
+              vm.calendario = calendario;
+            }],
+            controllerAs: 'vm'
           }
         }
       })

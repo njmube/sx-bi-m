@@ -9,6 +9,10 @@
 
   function configBlock($stateProvider, $urlRouterProvider){
     $stateProvider
+      .state('pendiente', {
+        url: '/pendiente',
+        templateUrl: 'home/pendiente.html'
+      })
       // Indicadores
       .state('app.indicadores', {
         url: '/indicadores',

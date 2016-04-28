@@ -3,3 +3,17 @@
   height: 100%;
 }
 
+.total-row {
+	color: blue;
+}
+
+// .total {
+//   font-size: 14px; 
+//   color: rgb(0, 0, 0);
+
+// }
+.total {
+  font-weight: bold;
+  font-style: italic;
+}
+
