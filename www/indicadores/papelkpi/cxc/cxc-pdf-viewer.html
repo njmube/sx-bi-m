@@ -1,0 +1,17 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-dark">
+        <h1 class="title">Cuentas por Cobrar</h1> 
+        <button ng-click="vm.modal.hide()" class="button button-icon icon ion-android-close"></button>
+    </ion-header-bar>
+    <ion-content>
+        <!-- <h1>Pendiente</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+        <ng-pdf ng-if="pdfUrl" template-url="common/pdfViewer.html" canvasid="pdf" scale=1>
+        </ng-pdf>  
+    </ion-content>
+</ion-modal-view>
