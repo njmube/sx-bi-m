@@ -5,12 +5,11 @@
     .module('sx-bi')
     .controller('PapelKpiCxCController',PapelKpiCxCController);
 
-  PapelKpiCxCController.$inject = ['$scope','$ionicModal','$log','papelKpiCxCService'];
+  PapelKpiCxCController.$inject = ['$scope','$ionicModal','$log','papelKpiCxCService','calendarioService'];
 
-  function PapelKpiCxCController($scope, $ionicModal, $log, papelKpiCxCService) {
-    var vm = this;
-    vm.generateReport = generateReport;
-
+  function PapelKpiCxCController($scope, $ionicModal, $log, papelKpiCxCService, calendarioService) {
+    
+    $scope.generateReport = generateReport;
     activate();
 
     // Initialize the modal view.
@@ -18,11 +17,11 @@
         scope: $scope,
         animation: 'slide-in-up'
     }).then(function (modal) {
-        vm.modal = modal;
+        $scope.modal = modal;
     });
 
     function activate() {
-      $log.info('Inicializando controlador: PapelKpiCxCController');
+      $log.info('Inicializando controlador: PapelKpiCxCController  ');
 
       //Defaults for PDF Viewer....
       $scope.scroll = 0;
@@ -39,18 +38,20 @@
       };
     }
 
-    function generateReport(){
-      papelKpiCxCService.buildPdf()
+    function generateReport(calendarioId){
+      var calendario = calendarioService.getCurrent();
+      
+      papelKpiCxCService.buildPdf(calendario)
       .then(function(pdf) {
         var blob = new Blob([pdf], {type: 'application/pdf'});
         $scope.pdfUrl = URL.createObjectURL(blob);
-        vm.modal.show();
+        $scope.modal.show();
       });
     }
 
     // Clean up the modal view.
     $scope.$on('$destroy', function () {
-        vm.modal.remove();
+        $scope.modal.remove();
     });
   }
 

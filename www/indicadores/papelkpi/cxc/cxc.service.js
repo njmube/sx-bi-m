@@ -5,25 +5,37 @@
     .module('sx-bi')
     .factory('papelKpiCxCService',papelKpiCxCService);
 
-  papelKpiCxCService.$inject = ['$http', '$q', '$log'];
+  papelKpiCxCService.$inject = ['$http', '$q', '$log','ClienteAtrasoMax'];
 
-  function papelKpiCxCService($http, $q, $log) {
+  function papelKpiCxCService($http, $q, $log, ClienteAtrasoMax) {
     var service = {
       buildPdf:buildPdf
     };
 
     return service;
 
-    function buildPdf(calendar){
+    function buildPdf(calendario){
       
+      // var r = ClienteAtrasoMax
+      //   .findByCalendario({
+      //     calendarioId:calendario.id,
+      //     clave: 'TOTAL'
+      //   });
+      //$log.info('Found : '+rows);
       return $q(function(resolve, reject) {
-        var dd = createDocumentDefinition(calendar);
-        var pdf = pdfMake.createPdf(dd);
 
-        pdf.getBase64(function (output) {
-            //$log.info('Generando pdf para PapelKpiCxC .....'+output);
-            resolve(base64ToUint8Array(output));
-        });
+        var endpoint = 'http://localhost:8080/api/bi/clienteAtrasoMax';
+        $http.get(endpoint,{params: {calendarioId:calendario.id}})
+          .then(function(response) {
+            $log.info('Response: '+response.data);
+            var dd = createDocumentDefinition(calendario,response.data);
+            var pdf = pdfMake.createPdf(dd);
+
+            pdf.getBase64(function (output) {
+                //$log.info('Generando pdf para PapelKpiCxC .....'+output);
+                resolve(base64ToUint8Array(output));
+            });
+          });
       });
     }
   }
@@ -37,13 +49,30 @@
       return uint8Array;
   }
 
-  function createDocumentDefinition(calendar) {
-
-      var items = [];
-
+  function createDocumentDefinition(calendario,rows) {
+      
+      var items = rows.map(function(item) {
+               return [
+                item.clave, 
+                item.nombre,
+                item.plazo.toString(),
+                item.lineaCredito.toString(),
+                item.facturas.toString(),
+                item.atrasoMax.toString(),
+                item.saldo.toString(),
+                item.porVencer.toString(),
+                item.vencido.toString(),
+                item.atraso1a30.toString(),
+                item.atraso31a60.toString(),
+                item.atraso61a90.toString(),
+                item.atrasomas91.toString()
+               ];
+            });
+      var fecha = new Date(calendario.fechaFinal).addDays(-1);
       var dd = {
           pageSize: 'LETTER',
           pageOrientation: 'landscape',
+          pageMargins: [ 10, 10, 10, 10 ],
           content: [
               { text: 'PAPEL S.A. de C.V', style: 'header'},
               {
@@ -51,19 +80,21 @@
                   {
                     fontSize: 16,
                     alignment: 'left',
-                    text: 'Fecha final'
+                    text: fecha.toLocaleDateString('es-MX',{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
                   },
                   {
                     fontSize: 16,
                     alignment: 'left',
-                    text: 'Semana 14'
+                    text: 'Semana '+calendario.semana
                   }
                 ]
               },
               {
                   style: 'itemsTable',
                   table: {
-                      widths: ['*', 75, 75, 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto' ],
+                      widths: ['auto','*','auto','auto','auto','auto','auto','auto','auto','auto','auto','auto','auto'
+                        //75, 75, 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto' 
+                      ],
                       body: [
                           [ 
                               { text: 'Clave', style: 'itemsTableHeader' },
@@ -71,15 +102,14 @@
                               { text: 'Pzo', style: 'itemsTableHeader' },
                               { text: 'Línea', style: 'itemsTableHeader' },
                               { text: 'Facs', style: 'itemsTableHeader' },
-                              { text: 'Aso Max', style: 'itemsTableHeader' },
+                              { text: 'A. Max', style: 'itemsTableHeader' },
                               { text: 'Saldo', style: 'itemsTableHeader' },
-                              { text: 'X Vencer', style: 'itemsTableHeader' },
-                              { text: 'Vencido', style: 'itemsTableHeader' },
+                              { text: 'X Venc', style: 'itemsTableHeader' },
+                              { text: 'Vdo', style: 'itemsTableHeader' },
                               { text: '1 a 30 ', style: 'itemsTableHeader' },
                               { text: '31 a 60', style: 'itemsTableHeader' },
                               { text: '61 a 90', style: 'itemsTableHeader' },
-                              { text: ' 90 +', style: 'itemsTableHeader' },
-                              { text: 'Ult pago', style: 'itemsTableHeader' }
+                              { text: ' 90 +', style: 'itemsTableHeader' }
                               
                           ]
                       ].concat(items)
@@ -89,22 +119,23 @@
           ],
           styles: {
               header: {
-                  fontSize: 20,
+                  fontSize: 18,
                   bold: true,
-                  margin: [0, 0, 0, 10],
+                  margin: [0, 0, 0, 5],
                   alignment: 'right'
               },
               subheader: {
-                  fontSize: 16,
+                  fontSize: 10,
                   bold: true,
                   margin: [0, 20, 0, 5]
               },
               itemsTable: {
-                  margin: [0, 5, 0, 15]
+                  margin: [0, 5, 0, 10],
+                  fontSize:8
               },
               itemsTableHeader: {
                   bold: true,
-                  fontSize: 13,
+                  fontSize: 10,
                   color: 'black'
               },
               totalsTable: {
