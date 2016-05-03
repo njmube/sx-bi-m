@@ -20,4 +20,10 @@
 .pdf-controls { width: 100%; display: block; background: #eee; padding: 1em;}
 .fixed { position: fixed; top: 0; left: calc(50% - 480px); z-index: 100; width: 100%; padding: 1em; background: rgba(238, 238, 238,.9); width: 960px; }
 
+.platform-android .bar-subheader.has-tabs-top{
+	top:93px;
+}
 
+.platform-android .has-subheader.has-tabs-top{
+	top:137px;
+}

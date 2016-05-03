@@ -5,9 +5,9 @@
     .module('sx-bi')
     .factory('calendarioService',calendarioService);
 
-  calendarioService.$inject = ['$http','$localStorage','$log'];
+  calendarioService.$inject = ['$http','$localStorage','$log','ApiEndpoint'];
 
-  function calendarioService($http, $localStorage, $log) {
+  function calendarioService($http, $localStorage, $log, ApiEndpoint) {
     $localStorage.$default({calendarios:[],currentCalendario:{}});
     var calendarios = []; //$localStorage.calendarios;
     var service = {
@@ -22,7 +22,9 @@
     function getCalendarios() {
 
       //return $localStorage.calendarios
-      return $http.get('http://localhost:8080/api/bi/calendarios');
+      //return $http.get('http://localhost:8080/api/bi/calendarios');
+      var uri = ApiEndpoint.url+'bi/calendarios'
+      return $http.get(uri);
         // .then(function (response) {
         //   calendarios = response.data;
         //   $log.info('Calendarios cargados: '+calendarios.length);

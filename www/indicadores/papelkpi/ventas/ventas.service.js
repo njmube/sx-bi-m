@@ -5,9 +5,9 @@
     .module('sx-bi')
     .factory('papelKpiVenta',papelKpiVenta);
 
-  papelKpiVenta.$inject = ['$http', '$localStorage', 'VentaKpiRow','$log'];
+  papelKpiVenta.$inject = ['$http', '$localStorage', 'VentaKpiRow','$log', 'ApiEndpoint'];
 
-  function papelKpiVenta($http, $localStorage, VentaKpiRow,$log) {
+  function papelKpiVenta($http, $localStorage, VentaKpiRow,$log, ApiEndpoint) {
     
     var ventas = [];
     var service = {
@@ -21,7 +21,7 @@
    
     function getVentas(calendario) {
       
-      var endpoint = 'http://localhost:8080/api/bi/factVentasSemBi';
+      var endpoint = ApiEndpoint.url+'bi/factVentasSemBi';
       return $http.get(endpoint,{params: {calendarioId:calendario.id}})
         .then(function(response) {
           return new VentasPorCalendario(calendario,response.data);

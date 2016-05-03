@@ -5,10 +5,11 @@
     .module('sx-bi')
     .factory('ClienteAtrasoMax',ClienteAtrasoMax);
 
-  ClienteAtrasoMax.$inject = ['$resource'];
+  ClienteAtrasoMax.$inject = ['$resource', 'ApiEndpoint'];
 
-  function ClienteAtrasoMax($resource) {
-    var res = $resource('http://localhost:8080/api/bi/clienteAtrasoMax',
+  function ClienteAtrasoMax($resource, ApiEndpoint) {
+    var url = ApiEndpoint.url+'bi/clienteAtrasoMax'
+    var res = $resource(url,
       null,
       {
         'findByCalendario': { method: 'GET',isArray:false}

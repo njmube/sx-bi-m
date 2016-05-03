@@ -5,9 +5,9 @@
     .module('sx-bi')
     .factory('papelKpiCxCService',papelKpiCxCService);
 
-  papelKpiCxCService.$inject = ['$http', '$q', '$log','ClienteAtrasoMax'];
+  papelKpiCxCService.$inject = ['$http', '$q', '$log','ClienteAtrasoMax', 'ApiEndpoint'];
 
-  function papelKpiCxCService($http, $q, $log, ClienteAtrasoMax) {
+  function papelKpiCxCService($http, $q, $log, ClienteAtrasoMax, ApiEndpoint) {
     var service = {
       buildPdf:buildPdf
     };
@@ -16,15 +16,10 @@
 
     function buildPdf(calendario){
       
-      // var r = ClienteAtrasoMax
-      //   .findByCalendario({
-      //     calendarioId:calendario.id,
-      //     clave: 'TOTAL'
-      //   });
-      //$log.info('Found : '+rows);
+      
       return $q(function(resolve, reject) {
-
-        var endpoint = 'http://localhost:8080/api/bi/clienteAtrasoMax';
+        
+        var endpoint = ApiEndpoint.url+'bi/clienteAtrasoMax'
         $http.get(endpoint,{params: {calendarioId:calendario.id}})
           .then(function(response) {
             $log.info('Response: '+response.data);

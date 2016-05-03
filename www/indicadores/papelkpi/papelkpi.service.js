@@ -5,10 +5,11 @@
     .module('sx-bi')
     .factory('PapelKpi',PapelKpi);
 
-  PapelKpi.$inject = ['$resource'];
+  PapelKpi.$inject = ['$resource', 'ApiEndpoint'];
 
-  function PapelKpi($resource) {
-    var res = $resource('http://localhost:8080/api/bi/papelKpis',
+  function PapelKpi($resource, ApiEndpoint) {
+    var uri = ApiEndpoint.url+'bi/papelKpis'
+    var res = $resource(uri,
       null,
       {
         'findByCalendario': { method: 'GET',isArray:false}
