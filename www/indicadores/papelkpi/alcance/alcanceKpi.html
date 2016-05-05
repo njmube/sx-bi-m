@@ -1,0 +1,126 @@
+<ion-view>
+  <ion-nav-title><i class="icon ion-social-buffer "></i> Papel BI 1</ion-nav-title>
+  <div class="bar bar-subheader bar-dark">
+    <h1 class="title">KPI Alcance</h1>   
+  </div>
+
+  <ion-slides  options="vm.options" slider="vm.data.slider">
+    
+    <ion-slide-page>
+      <ion-content class="has-subheader">
+        <div class="list">
+          <div class="item item-divider text-center"><p>Menor a 6 meses</p></div>
+          <div class="row">
+            <div class="col text-center">Linea</div>
+            <div class="col text-center">Tons</div>
+            <div class="col text-center">Part</div>
+            <div class="col text-center">Prods</div>
+            <div class="col text-center">Costo</div>
+          </div>
+          <div class="item row text-right linea-row" ng-repeat="v in vm.alcance">
+            <div class="col text-left">
+              <h5>{{v.linea | truncate: 8: ' '}} </h5>
+            </div>
+            <div class="col">
+              <h5>{{v.margenPorcentajeUt | number:2}}</h5>
+            </div>
+            <div class="col">
+              <h5>{{v.mayorToneladas | number:2}} </h5>
+            </div>
+            <div class="col">
+              <h5>{{v.mayorParticipacion*100 | number:2}} %</h5>
+            </div>
+            <div class="col">
+              <h5>{{v.mayorProductos | number:0}}</h5>
+            </div>
+            <div class="col">
+              <h5>{{v.mayorCosto | number:0}}</h5>
+            </div>
+          </div>
+          
+          <div class="item row text-right total" >
+            <div class="col text-left">
+              <p>Total</p>
+            </div>
+            <div class="col text-right">
+              <p>{{vm.totales.toneladas | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{vm.totales.participacion | number:0}} %</p>
+            </div>
+            <div class="col">
+              <p>{{vm.totales.costo | number:0}}</p>
+            </div>
+            
+          </div>
+        </div>
+      </ion-content>
+    </ion-slide-page>
+    <ion-slide-page>
+      <ion-content class="has-subheader">
+        <div class="list">
+          <div class="item item-divider text-center"><p>Mayor a 6 meses</p></div>
+          <div class="row">
+            <div class="col text-center">Linea</div>
+            <div class="col text-center">Toneladas</div>
+            <!-- <div class="col text-center">Part</div> -->
+            <div class="col text-center">Prods</div>
+            <div class="col text-center">Costo</div>
+            <div class="col text-center">Nacional</div>
+            <div class="col text-center">Importado</div>
+
+          </div>
+          <div class="item row text-right linea-row" ng-repeat="v in vm.alcance">
+            <div class="col text-left">
+              <h5>{{v.linea | truncate: 8: ' '}} </h5>
+            </div>
+            <div class="col">
+              <h6> {{v.menorToneladas | number:2}} </h6>
+              <h6> Part: {{v.menorParticipacion*100 | number:2}} %</h6>
+            </div>
+            <!-- <div class="col">
+              <h5>{{v.menorParticipacion*100 | number:2}} %</h5>
+            </div> -->
+            <div class="col">
+              <h5>{{v.menorProductos | number:0}}</h5>
+            </div>
+            <div class="col">
+              <h5>{{v.menorCosto | number:0}}</h5>
+            </div>
+            <div class="col">
+              <h6>Men 1 : {{v.menorDias1Nal | number:0}}</h6>
+              <h6>May .5: {{v.menorDias2Nal | number:0}}</h6>
+            </div>
+            <div class="col">
+              <h6>Men 1 :{{v.menorDias1Imp | number:0}}</h6>
+              <h6>May .5:{{v.menorDias2Imp | number:0}}</h6>
+            </div>
+          </div>
+          
+          <div class="item row text-right total" >
+            <div class="col text-left">
+              <p>Total</p>
+            </div>
+            <div class="col text-right">
+              <p>{{vm.totales.toneladas | number:0}}</p>
+            </div>
+            <div class="col">
+              <p>{{vm.totales.participacion | number:0}} %</p>
+            </div>
+            <div class="col">
+              <p>{{vm.totales.costo | number:0}}</p>
+            </div>
+            
+          </div>
+        </div>
+      </ion-content>
+    </ion-slide-page>
+
+    
+    
+  </ion-slides>
+
+  
+  
+  
+</ion-view>

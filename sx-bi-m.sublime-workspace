@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"each",
+				"forEach(callback)	Array"
+			],
+			[
+				"getVentasPo",
+				"getVentasPorTipoDePago"
+			],
+			[
+				"forEa",
+				"forEach(callback)	Array"
+			],
+			[
 				"pro",
 				"prototype"
 			],
@@ -502,167 +514,40 @@
 			[
 				"html",
 				"html	html"
-			],
-			[
-				"re",
-				"ready	document-ready"
-			],
-			[
-				"input",
-				"input	input - text"
-			],
-			[
-				"table",
-				"table-condensed"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "www/indicadores/papelkpi/resumen/cxc.html",
+			"file": "www/indicadores/papelkpi/alcance/alcanceKpi.service.js",
 			"settings":
 			{
-				"buffer_size": 3496,
+				"buffer_size": 614,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "www/indicadores/papelkpi/resumen/papelkpi.resumen.controller.js",
+			"file": "www/indicadores/papelkpi/alcance/alcanceKpi.html",
 			"settings":
 			{
-				"buffer_size": 843,
+				"buffer_size": 1962,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "www/indicadores/papelkpi/resumen/papelkpi.resumen.html",
+			"file": "www/css/style.css",
 			"settings":
 			{
-				"buffer_size": 2017,
+				"buffer_size": 648,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "www/indicadores/papelkpi/resumen/toneladas.html",
+			"file": "www/indicadores/papelkpi/alcance/alcanceKpi.js",
 			"settings":
 			{
-				"buffer_size": 3572,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/indicadores/papelkpi/resumen/margen.html",
-			"settings":
-			{
-				"buffer_size": 4318,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/indicadores/papelkpi/resumen/precio.html",
-			"settings":
-			{
-				"buffer_size": 2289,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/indicadores/papelkpi/resumen/tickets.html",
-			"settings":
-			{
-				"buffer_size": 4274,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/indicadores/papelkpi/papelkpi.service.js",
-			"settings":
-			{
-				"buffer_size": 5389,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/indicadores/papelkpi/resumen/inventarios.html",
-			"settings":
-			{
-				"buffer_size": 3363,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/indicadores/indicadores.route.js",
-			"settings":
-			{
-				"buffer_size": 3563,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/index.html",
-			"settings":
-			{
-				"buffer_size": 2469,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/indicadores/papelkpi/ventas/ventas.route.js",
-			"settings":
-			{
-				"buffer_size": 546,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/indicadores/papelkpi/ventas/ventas.js",
-			"settings":
-			{
-				"buffer_size": 787,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/indicadores/papelkpi/ventas/ventas.service.js",
-			"settings":
-			{
-				"buffer_size": 799,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<ion-view>\n  <ion-nav-title><i class=\"icon ion-social-buffer \"></i> Papel BI 1</ion-nav-title>\n <div class=\"bar bar-subheader bar-dark\">\n   <h1 class=\"title\">KPI Ventas</h1>\n </div>\n  <ion-content class=\"has-subheader\">\n    <div class=\"list\">\n      <div class=\"item row text-center\"> Semana {{v.calendario.semana}}</div>\n      <div class=\"item row text-right\" ng-repeat=\"v in vm.ventas | filterBy: ['tipo']: 'SEM'\">\n        <div class=\"col text-left\">\n          <p>{{v.sucursal | truncate: 8: ' '}} </p>\n        </div>\n        <div class=\"col\">\n          <p>{{v.toneladas | number:0}}</p>\n        </div>\n        <div class=\"col\">\n          <p>{{v.venta | number:0 }}</p>\n        </div>\n        <div class=\"col\">\n          <p>%</p>\n        </div>\n        <div class=\"col\">\n          <p>{{v.venta/v.toneladas | number:2}}</p>\n        </div>\n        \n        \n      </div>\n    </div>\n  <!-- <ion-footer-bar align-title=\"center\" class=\"bar-dark\">\n    <h1 class=\"title\">Semana: {{vm.calendario.semana}} ({{vm.calendario.year}})</h1>\n  </ion-footer-bar> -->\n  \n</ion-view>",
-			"file": "www/indicadores/papelkpi/ventas/ventas.html",
-			"file_size": 1050,
-			"file_write_time": 131061605530000000,
-			"settings":
-			{
-				"buffer_size": 1066,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/js/app.js",
-			"settings":
-			{
-				"buffer_size": 123,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/indicadores/papelkpi/papelkpi.home.html",
-			"settings":
-			{
-				"buffer_size": 1757,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/common/clienteAtrasoMax.service.js",
-			"settings":
-			{
-				"buffer_size": 825,
+				"buffer_size": 1106,
 				"line_ending": "Unix"
 			}
 		}
@@ -761,35 +646,68 @@
 	"expanded_folders":
 	[
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/js"
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/common",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/alcance",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/inventario"
 	],
 	"file_history":
 	[
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/bower.json",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/lib/ionic/css/ionic.css",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/README.md",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/papelkpi.resumen.controller.js",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/cxc.js",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/inventarios.service.js",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/papelkpi.resumen.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/alcance/alcanceKpi.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/papelkpi.home.html",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/index.html",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/cxc.service.js",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/indicadores.route.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/common/constants.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/inventario/inventariosKpi.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/alcance/alcanceKpi.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/inventario/inventariosKpi.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/ventas/ventas.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/inventario/inventariosKpi.service.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/config.xml",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/calendario/calendario.service.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/ventas/ventas.service.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/common/clienteAtrasoMax.service.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/papelkpi.service.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/inventarios.service.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/cxc/cxc.service.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/css/style.css",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/main/tabs.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/calendario/calendario.selector.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/sx-bi-m.sublime-project",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/cxc/cxc.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/lib/ionic/css/ionic.css",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/common/pdfViewer.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/cxc/cxc.route.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/cxc/cxc-pdf-viewer.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/cxc.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/js/app.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/common/pdfView.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/ventas/ventaskpi.margen.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/home/pendiente.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/cxc/cxckpi.home.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/ventas/ventas.toneladas.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/ventas/ventas.route.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/ventas/ventaskpi.tickets.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/ventas/ventaskpi.home.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/ventas/venta.model.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/cxc.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/papelkpi.resumen.controller.js",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/papelkpi.resumen.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/toneladas.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/margen.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/precio.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/tickets.html",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/inventarios.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/bower.json",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/README.md",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/cxc.service.js",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/inventarios.js",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/tickets.js",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/tickets.html",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/toneladas.js",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/papelkpi.service.js",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/margen.js",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/precio.html",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/precio.js",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/margen.html",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/resumen/toneladas.html",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/papelkpi.home.controller.js",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/calendario/calendario.selector.html",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/calendario/calendario.service.js",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/papelkpi.home.html",
 		"/Users/rcancino/Projects/siipapx/client/lx-bi-m/lx-bi-m.sublime-project",
 		"/Users/rcancino/Projects/siipapx/server/sx-server/grails-app/domain/sx/bi/kpi/PapelKpiItem.groovy",
 		"/Users/rcancino/Projects/siipapx/server/sx-server/grails-app/controllers/sx/bi/CalendarioBiController.groovy",
@@ -863,36 +781,7 @@
 		"/Users/rcancino/Projects/imports/lx-imports/src/groovy/com/luxsoft/econta/polizas/PolizaUtils.groovy",
 		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/common/buttons/_backButton.gsp",
 		"/Users/rcancino/Projects/imports/lx-imports/grails-app/taglib/com/luxsoft/lx/core/CoreTagLib.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/domain/com/luxsoft/impapx/contabilidad/CuentaContable.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/domain/com/luxsoft/impapx/contabilidad/Poliza.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/domain/com/luxsoft/lx/contabilidad/ProcesadorDePoliza.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/migrations/ajuste-polizas-002.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/poliza/create.gsp",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/controllers/com/luxsoft/impapx/contabilidad/CuentaContableController.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/poliza/edit.gsp",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/services/com/luxsoft/impapx/contabilidad/PolizaService.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/conf/BootStrap.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/controllers/com/luxsoft/impapx/contabilidad/PolizaController.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/web-app/reports/PolizaContable.jrxml",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/conf/spring/resources.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/domain/com/luxsoft/econta/polizas/GeneradorDePoliza.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/controllers/com/luxsoft/impapx/RequisicionController.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/controllers/com/luxsoft/impapx/PedimentoController.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/pedimento/show.gsp",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/layouts/operaciones.gsp",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/_fields/cuentaContable/_widget.gsp",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/pedimento/create.gsp",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/layouts/createForm.gsp",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/proveedor/create.gsp",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/layouts/poliza.gsp",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/layouts/luxor.gsp",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/controllers/com/luxsoft/impapx/ImportadorController.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/requisicionDet/_createForm.gsp",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/poliza/index.gsp",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/domain/com/luxsoft/lx/contabilidad/PolizaFolio.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/src/groovy/com/luxsoft/lx/contabilidad/PeriodoContable.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/conf/com/luxsoft/impapx/CoreFilters.groovy",
-		"/Users/rcancino/Projects/imports/lx-imports/grails-app/views/_fields/poliza/tipo/_widget.gsp"
+		"/Users/rcancino/Projects/imports/lx-imports/grails-app/domain/com/luxsoft/impapx/contabilidad/CuentaContable.groovy"
 	],
 	"find":
 	{
@@ -917,6 +806,61 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"getInventarios",
+			"PapelKpiAlcance",
+			"inventario",
+			"papelKpiInventario",
+			"PapelKpiInventariosController",
+			"papelKpiInventario",
+			"papelKpi",
+			"papelKpiVenta",
+			"PapelKpiVenta",
+			"papelKpiVenta",
+			"PapelKpiVenta",
+			"papelKpiVenta",
+			"ApiEndpoit",
+			"badges",
+			"vm",
+			"*",
+			"console",
+			"a",
+			"ion-item",
+			".item p",
+			".item .p",
+			".item.p",
+			"positive",
+			"text-pos",
+			"text-a",
+			"p",
+			"items",
+			"item",
+			"total",
+			"item",
+			"bold",
+			"cancelaciones",
+			"cre",
+			"Semana",
+			"getVentas",
+			"ventas",
+			"Ventas",
+			"vent",
+			"ion-content",
+			"ion-slide",
+			"right",
+			"p",
+			"h3",
+			"small",
+			"text-small",
+			"text-",
+			"strong",
+			"VentaKpiRow",
+			"cre",
+			"config.",
+			"VentaKpiRow",
+			"VentaKpiRow)",
+			"cre",
+			"toneladas",
+			"cre",
 			"papelKpiVentaService",
 			"text-",
 			"text-center",
@@ -989,62 +933,7 @@
 			"Requisicion",
 			"requisicion",
 			"update",
-			"prin",
-			"impri",
-			"print",
-			"poliza.",
-			"poliza",
-			"Poliza",
-			"poliza",
-			"property",
-			"hidden",
-			"year",
-			";",
-			"cuentaContable",
-			"ejercicio",
-			"pedimento",
-			"polizaService",
-			"NotaDeCredito",
-			"onApplicationEvent",
-			"ApplicationEvent",
-			"importe con",
-			"importe con	",
-			"print",
-			"cancelarDialog",
-			"ReportCom",
-			"RepodrCom",
-			"RepodrComm",
-			"cuentaDeGastosService",
-			"save",
-			"actualizar",
-			"actualizarImpuestos",
-			"message",
-			"actualizarPre",
-			"actualizarpre",
-			"database",
-			"dbm",
-			".skin-2",
-			".skin-1",
-			".skin-2",
-			"s-skin-2",
-			"s-skin-1",
-			"s-skin-3",
-			"s-skin",
-			"skin",
-			"inspinia",
-			"tipo_De_Cambio",
-			"02",
-			"drop",
-			"cfdi",
-			"comprobante",
-			"data-toggle",
-			"actualizarCostosDialog",
-			"incrementable_usd",
-			"incrementableUsd",
-			"incrementables",
-			"actualizarGastosDeImportacion",
-			"actualizarPre",
-			"gastosHonorarios"
+			"prin"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1062,448 +951,55 @@
 	"groups":
 	[
 		{
-			"selected": 14,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "www/indicadores/papelkpi/resumen/cxc.html",
+					"file": "www/indicadores/papelkpi/alcance/alcanceKpi.service.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3496,
+						"buffer_size": 614,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3357,
-								3357
+								275,
+								275
 							]
 						],
 						"settings":
 						{
 							"open_with_edit": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 664.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "www/indicadores/papelkpi/resumen/papelkpi.resumen.controller.js",
-					"semi_transient": false,
+					"file": "www/indicadores/papelkpi/alcance/alcanceKpi.html",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 843,
+						"buffer_size": 1962,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								692,
-								704
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "www/indicadores/papelkpi/resumen/papelkpi.resumen.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2017,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1639,
-								1639
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 64.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "www/indicadores/papelkpi/resumen/toneladas.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3572,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								99,
-								185
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "www/indicadores/papelkpi/resumen/margen.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4318,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4144,
-								4303
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 979.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "www/indicadores/papelkpi/resumen/precio.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2289,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								263,
-								342
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "www/indicadores/papelkpi/resumen/tickets.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4274,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3333,
-								3333
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 899.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "www/indicadores/papelkpi/papelkpi.service.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5389,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 973.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "www/indicadores/papelkpi/resumen/inventarios.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3363,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3077,
-								3077
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "www/indicadores/indicadores.route.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3563,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								986,
-								996
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 394.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "www/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2469,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								694,
-								694
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 152.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "www/indicadores/papelkpi/ventas/ventas.route.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 546,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								472,
-								472
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "www/indicadores/papelkpi/ventas/ventas.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 787,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								621,
-								621
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "www/indicadores/papelkpi/ventas/ventas.service.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 799,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								588,
-								588
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "www/indicadores/papelkpi/ventas/ventas.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1066,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								284,
-								314
+								786,
+								817
 							]
 						],
 						"settings":
@@ -1520,92 +1016,63 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
-					"file": "www/js/app.js",
+					"buffer": 2,
+					"file": "www/css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 123,
+						"buffer_size": 648,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								104,
-								104
+								226,
+								293
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
-					"file": "www/indicadores/papelkpi/papelkpi.home.html",
+					"buffer": 3,
+					"file": "www/indicadores/papelkpi/alcance/alcanceKpi.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1757,
+						"buffer_size": 1106,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								684,
-								684
+								576,
+								576
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 121.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "www/common/clienteAtrasoMax.service.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 825,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								660,
-								660
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 49.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1660,16 +1127,64 @@
 		"selected_items":
 		[
 			[
+				"sty",
+				"src/css/style.css"
+			],
+			[
+				"const",
+				"src/common/constants.js"
+			],
+			[
+				"conf",
+				"RottFoleder/config.xml"
+			],
+			[
+				"cons",
+				"src/common/constants.js"
+			],
+			[
+				"calendari.ser",
+				"src/indicadores/papelkpi/calendario/calendario.service.js"
+			],
+			[
+				"con",
+				"RottFoleder/config.xml"
+			],
+			[
+				"calendario",
+				"src/indicadores/papelkpi/calendario/calendario.selector.html"
+			],
+			[
+				"papelkpi",
+				"src/indicadores/papelkpi/papelkpi.home.html"
+			],
+			[
+				"tabs",
+				"src/main/tabs.html"
+			],
+			[
+				"ionic",
+				"src/lib/ionic/css/ionic.css"
+			],
+			[
+				"ventas.mar",
+				"src/indicadores/papelkpi/ventas/ventaskpi.margen.html"
+			],
+			[
+				"ionic.c",
+				"src/lib/ionic/css/ionic.css"
+			],
+			[
+				"ioni",
+				"src/lib/ionic/css/ionic.css"
+			],
+			[
 				"bowe",
 				"RottFoleder/bower.json"
 			],
 			[
 				"ion",
 				"src/lib/ionic/css/ionic.css"
-			],
-			[
-				"tabs",
-				"src/app/tabs.html"
 			],
 			[
 				"ind",
@@ -1686,10 +1201,6 @@
 			[
 				"papelkp",
 				"Services/sx/bi/kpi/PapelKpiService.groovy"
-			],
-			[
-				"papelkpi",
-				"Domain Objects/sx/bi/kpi/PapelKpi.groovy"
 			],
 			[
 				"lo",
@@ -2126,50 +1637,6 @@
 			[
 				"importadorco",
 				"Controllers/com/luxsoft/impapx/ImportadorController.groovy"
-			],
-			[
-				"createf",
-				"Views/layouts/createForm.gsp"
-			],
-			[
-				"cuentacontabl",
-				"Domain Objects/com/luxsoft/impapx/contabilidad/CuentaContable.groovy"
-			],
-			[
-				"_create",
-				"Views/requisicionDet/_createForm.gsp"
-			],
-			[
-				"luxor.gsp",
-				"Views/layouts/luxor.gsp"
-			],
-			[
-				"polizaf",
-				"Domain Objects/com/luxsoft/lx/contabilidad/PolizaFolio.groovy"
-			],
-			[
-				"poliza.groo",
-				"Domain Objects/com/luxsoft/impapx/contabilidad/Poliza.groovy"
-			],
-			[
-				"polizaser",
-				"Services/com/luxsoft/impapx/contabilidad/PolizaService.groovy"
-			],
-			[
-				"periodoco",
-				"Groovy Source/com/luxsoft/lx/contabilidad/PeriodoContable.groovy"
-			],
-			[
-				"coref",
-				"Configuration/com/luxsoft/impapx/CoreFilters.groovy"
-			],
-			[
-				"poliza.gs",
-				"Views/layouts/poliza.gsp"
-			],
-			[
-				"conf",
-				"Configuration/Config.groovy"
 			]
 		],
 		"width": 0.0

@@ -129,6 +129,30 @@
             controllerAs: 'vm'
           }
         }
+      })
+      .state('papelKpiInventarios', {
+        parent: 'papelkpiParent',
+        url: '/inventarios',
+        views: {
+          'indicadores@app': {
+            templateUrl: 'indicadores/papelkpi/inventario/inventariosKpi.html',
+            controller: 'PapelKpiInventariosController',
+            controllerAs: 'vm'
+            
+          }
+        }
+      })
+      .state('papelKpiAlcance', {
+        parent: 'papelkpiParent',
+        url: '/inventarios',
+        views: {
+          'indicadores@app': {
+            templateUrl: 'indicadores/papelkpi/alcance/alcanceKpi.html',
+            controller: 'PapelKpiAlcanceController',
+            controllerAs: 'vm'
+            
+          }
+        }
       });
 
       //$urlRouterProvider.when('/  papelkpis','/papelkpis/list')
