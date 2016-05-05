@@ -16,9 +16,9 @@
 
     return service;
    
-    function getAlcance (calendario) {
+    function getAlcance (calendario,deLinea) {
       var endpoint = ApiEndpoint.url + 'bi/inventarioAlcance';
-      return $http.get(endpoint, {params: {calendarioId:calendario.id}})
+      return $http.get(endpoint, {params: {calendarioId:calendario.id, deLinea:deLinea }})
         .then( function (response) {
           return response.data;
         });

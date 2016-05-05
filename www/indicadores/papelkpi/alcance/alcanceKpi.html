@@ -10,48 +10,56 @@
       <ion-content class="has-subheader">
         <div class="list">
           <div class="item item-divider text-center"><p>Mayor a 6 meses</p></div>
-          <div class="row">
-            <div class="col text-center">Linea</div>
-            <div class="col text-center">Tons</div>
-            <div class="col text-center">Part</div>
-            <div class="col text-center">Prods</div>
-            <div class="col text-center">Costo</div>
+         
+          <div class="row  row-linea-header text-center">
+            <div class="col col-33">Linea</div>
+            <div class="col">Margen</div>
+            <div class="col">Tons</div>
+            <div class="col">Part</div>
+            <div class="col">Prods</div>
+            <div class="col">Costo</div>
           </div>
+          
           <div class="item row text-right linea-row" ng-repeat="v in vm.alcance">
-            <div class="col text-left">
-              <h5>{{v.linea | truncate: 8: ' '}} </h5>
+            <div class="col col-33 text-left">
+              <h5>{{v.linea }} </h5>
             </div>
             <div class="col">
               <h5>{{v.margenPorcentajeUt | number:2}}</h5>
             </div>
-            <div class="col">
+            <div class="col ">
               <h5>{{v.mayorToneladas | number:2}} </h5>
             </div>
-            <div class="col">
+            <div class="col ">
               <h5>{{v.mayorParticipacion*100 | number:2}} %</h5>
             </div>
-            <div class="col">
+            <div class="col ">
               <h5>{{v.mayorProductos | number:0}}</h5>
             </div>
-            <div class="col">
+            <div class="col ">
               <h5>{{v.mayorCosto | number:0}}</h5>
             </div>
           </div>
           
           <div class="item row text-right total" >
-            <div class="col text-left">
-              <p>Total</p>
-            </div>
-            <div class="col text-right">
-              <p>{{vm.totales.toneladas | number:0}}</p>
+            <div class="col col-33 text-left">
+              Totales
             </div>
             <div class="col">
-              <p>{{vm.totales.participacion | number:0}} %</p>
+              <h5>{{vm.totales.margenPorcentajeUt | number:2}}</h5>
             </div>
-            <div class="col">
-              <p>{{vm.totales.costo | number:0}}</p>
+            <div class="col ">
+              <h5>{{vm.totales.mayorToneladas | number:2}} </h5>
             </div>
-            
+            <div class="col ">
+              <h5>{{vm.totales.mayorParticipacion | number:2}} %</h5>
+            </div>
+            <div class="col ">
+              <h5>{{vm.totales.mayorProductos | number:0}}</h5>
+            </div>
+            <div class="col ">
+              <h5>{{vm.totales.mayorCosto | number:0}}</h5>
+            </div>
           </div>
         </div>
       </ion-content>
@@ -63,70 +71,52 @@
           <div class="item item-divider text-center"><p>Menor a 6 meses</p></div>
           
           <div class="row item row-linea-header text-right">
-            <div class="col-20">Linea</div>
-            <div class="col-10 ">Ton</div>
-            <div class="col-10">Part</div>
-            <div class="col-10 ">Prods</div>
-            <div class="col-10 ">Costo</div>
-            <div class="col-20 text-right">Nacional</div>
-            <div class="col-20 text-right">Importado</div>
+            <div class="col-25">Linea</div>
+            <div class="col ">Ton</div>
+            <div class="col">Part</div>
+            <div class="col ">Prods</div>
+            <div class="col ">Costo</div>
+            <div class="col text-right">Nacional</div>
+            <div class="col text-right">Importado</div>
           </div>
           <div class="row item row-linea-sub-header">
-            <div class="col-20"></div>
-            <div class="col-10 "></div>
-            <div class="col-10"></div>
-            <div class="col-10 "></div>
-            <div class="col-10 "></div>
-            <div class="col-10 text-right"><h6>&lt 1</h6></div>
-            <div class="col-10 text-right"><h6>&lt .5</h6></div>
-            <div class="col-10 text-right"><h6>&lt 1</h6></div>
-            <div class="col-10 text-right"><h6>&lt .5</h6></div>
+            <div class="col-25"></div>
+            <div class="col "></div>
+            <div class="col"></div>
+            <div class="col "></div>
+            <div class="col "></div>
+            <div class="col text-right"><h6>&lt 1</h6></div>
+            <div class="col text-right"><h6>&lt .5</h6></div>
+            <div class="col text-right"><h6>&lt 1</h6></div>
+            <div class="col text-right"><h6>&lt .5</h6></div>
           </div>
-          <!-- <div class="row">
-            <div class="col text-center"></div>
-            <div class="col text-center"></div>
-            <div class="col text-center"></div>
-            <div class="col text-center"></div>
-            <div class="col text-center"></div>
-            <div class="col text-center">
-              <div class="row">
-                <div class="col"><h6><1</h6></div>
-                <div class="col"><.5</div>
-              </div>
-            </div>
-            <div class="col text-center">
-              <div class="row">
-                <div class="col"><1</div>
-                <div class="col"><.5</div>
-              </div>
-            </div>
-          </div> -->
+          
           <div class="item row text-right " ng-repeat="v in vm.alcance">
-            <div class="col-20 text-left">
-              <h5>{{v.linea | truncate: 12: ' '}} </h5>
+            <div class="col-25 text-left">
+              <h5>{{v.linea }} </h5>
             </div>
-            <div class="col-10 ">
+            <div class="col ">
               <h6> {{v.menorToneladas | number:2}} </h6>
             </div>
-            <div class="col-10 ">
+            <div class="col ">
               <h5>{{v.menorParticipacion*100 | number:2}} %</h5>
             </div>
-            <div class="col-10 ">
+            <div class="col ">
               <h5>{{v.menorProductos | number:0}}</h5>
             </div>
-            <div class="col-10">
+            <div class="col">
               <h5>{{v.menorCosto | number:0}}</h5>
             </div>
-            <div class="col-10 ">
+            <div class="col ">
               <h6>{{v.menorDias1Nal | number:0}}</h6>
             </div>
-            <div class="col-10 ">
+            <div class="col ">
               <h6>{{v.menorDias2Nal | number:0}}</h6>
             </div>
-            <div class="col-10 ">
+            <div class="col ">
               <h6>{{v.menorDias1Imp | number:0}}</h6>
             </div>
-            <div class="col-10 ">
+            <div class="col ">
               <h6>{{v.menorDias2Imp | number:0}}</h6>
             </div>
           </div>
@@ -150,7 +140,64 @@
       </ion-content>
     </ion-slide-page>
 
-    
+    <ion-slide-page>
+      <ion-content class="has-subheader">
+        <div class="list">
+          <div class="item item-divider text-center"><p>Medidas especiales</p></div>
+         
+          <div class="row  row-linea-header text-center">
+            <div class="col col-33">Linea</div>
+            <div class="col">Margen</div>
+            <div class="col">Tons</div>
+            <div class="col">Part</div>
+            <div class="col">Prods</div>
+            <div class="col">Costo</div>
+          </div>
+          
+          <div class="item row text-right linea-row" ng-repeat="v in vm.alcanceEspecial">
+            <div class="col col-33 text-left">
+              <h5>{{v.linea }} </h5>
+            </div>
+            <div class="col">
+              <h5>{{v.margenPorcentajeUt | number:2}}</h5>
+            </div>
+            <div class="col ">
+              <h5>{{v.mayorToneladas | number:2}} </h5>
+            </div>
+            <div class="col ">
+              <h5>{{v.mayorParticipacion*100 | number:2}} %</h5>
+            </div>
+            <div class="col ">
+              <h5>{{v.mayorProductos | number:0}}</h5>
+            </div>
+            <div class="col ">
+              <h5>{{v.mayorCosto | number:0}}</h5>
+            </div>
+          </div>
+          
+          <div class="item row text-right total" >
+            <div class="col col-33 text-left">
+              Totales
+            </div>
+            <div class="col">
+              <h5>{{vm.totalEspecial.margenPorcentajeUt | number:2}}</h5>
+            </div>
+            <div class="col ">
+              <h5>{{vm.totalEspecial.mayorToneladas | number:2}} </h5>
+            </div>
+            <div class="col ">
+              <h5>{{vm.totalEspecial.mayorParticipacion | number:2}} %</h5>
+            </div>
+            <div class="col ">
+              <h5>{{vm.totalEspecial.mayorProductos | number:0}}</h5>
+            </div>
+            <div class="col ">
+              <h5>{{vm.totalEspecial.mayorCosto | number:0}}</h5>
+            </div>
+          </div>
+        </div>
+      </ion-content>
+    </ion-slide-page>
     
   </ion-slides>
 
