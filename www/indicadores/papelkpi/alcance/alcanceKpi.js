@@ -42,6 +42,18 @@
         
       });
 
+      papelKpiAlcance.getMargen(vm.calendario)
+      .then( function(data) {
+        vm.margen = data;
+        //$log.info('Marge: '+angular.toJson(data));
+      })
+      .catch( function(response) {
+        $log.error('Http error status: '+response.status);
+        $log.error(response.statusText);
+        $log.info('Error cargando datos....');
+        
+      });
+
       
     }
 
