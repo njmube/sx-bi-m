@@ -10,6 +10,14 @@
   function PapelKpiAlcanceController(calendario,papelKpiAlcance,$log,VentaKpiRow) {
     var vm = this;
     vm.calendario = calendario;
+    vm.options = {
+      loop: false,
+      nextButton: 'Siguiente',
+      prevButton: 'Anterior'
+      // effect: 'fade',
+      // speed: 500,
+    };
+    vm.data = {};
     
     activate();
 
