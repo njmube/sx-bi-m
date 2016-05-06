@@ -39,6 +39,17 @@
         $log.info('Error cargando pedidos pendientes por llegar....');
         
       });
+
+      papelKpiInventario.getComprobacion(vm.calendario)
+      .then( function(data) {
+        vm.comprobacion = data;
+      })
+      .catch( function(response) {
+        $log.error('Http error status: '+response.status);
+        $log.error(response.statusText);
+        $log.info('Error cargando pedidos pendientes por llegar....');
+        
+      });
     }
 
     function getTotales(data) {

@@ -82,8 +82,38 @@
             
           </div>
         </div>
-
       </ion-slide-page>
+
+      <ion-slide-page>
+        <div class="list">
+          
+          <div class="item item-divider text-center"><p>Comprobación</p></div>
+          
+          <div class="item row ">
+            <div class="col ">Inventario inicial:</div>
+              <div class="col text-right">{{vm.comprobacion.inicial}}</div>
+          </div>
+          <div class="item row ">
+            <div class="col ">Ventas:</div>
+            <div class="col text-right">{{vm.comprobacion.ventas}}</div>
+          </div>
+          <div class="item row ">
+            <div class="col">Compras nacionales:</div>
+            <div class="col text-right">{{vm.comprobacion.comprasNal}}</div>
+          </div>
+          <div class="item row ">
+            <div class="col">Compras de importación:</div>
+            <div class="col text-right">{{vm.comprobacion.comprasImp}}</div>
+          </div>
+          <div class="item row item-dark">
+            <div class="col">Inventario final:</div>
+            <div class="col text-right">{{vm.comprobacion.inicial+vm.comprobacion.ventas+vm.comprobacion.comprasNal+vm.comprobacion.comprasImp}}</div>
+          </div>
+          
+          
+        </div>
+      </ion-slide-page>
+
     </ion-slides>
     
   </ion-content>

@@ -12,7 +12,8 @@
     var ventas = [];
     var service = {
       getInventarios: getInventarios,
-      getPedidosPendientes : getPedidosPendientes
+      getPedidosPendientes : getPedidosPendientes,
+      getComprobacion: getComprobacion
     }
 
     return service;
@@ -28,6 +29,20 @@
     function getPedidosPendientes (calendario) {
       var endpoint = ApiEndpoint.url + 'bi/pedidoPorLlegar';
       return $http.get(endpoint, {params: {calendarioId:calendario.id}})
+        .then( function (response) {
+          return response.data;
+        });
+    }
+
+    function getComprobacion (calendario) {
+      var endpoint = ApiEndpoint.url + 'bi/comprobacionDeInventario';
+      return $http.get(endpoint, 
+          {
+            params: {
+              semana:calendario.semana, 
+              ejercicio:calendario.year
+            }
+          })
         .then( function (response) {
           return response.data;
         });

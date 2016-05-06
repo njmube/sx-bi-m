@@ -1,8 +1,10 @@
 <ion-view >
   <ion-nav-title><i class="icon ion-social-buffer "></i> Papel KPIs</ion-nav-title>
   
-  <ion-header-bar align-title="left" class="bar-dark bar-subheader">
-    <h1 class="title">Semana: {{vm.calendario.semana}} ({{vm.calendario.year}})</h1>
+  <ion-header-bar align-title="center" class="bar-dark bar-subheader">
+    <h1 class="title">
+      Semana:{{vm.calendario.semana}} ({{vm.calendario.fechaFinal | date:'dd/MM/yyyy'}})
+    </h1>   
     <div class="buttons">
       <button class="button icon-right ion-ios-calendar "
       ng-click="vm.openSelector()"></button>
