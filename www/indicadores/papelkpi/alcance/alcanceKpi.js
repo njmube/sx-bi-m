@@ -62,7 +62,15 @@
         mayorToneladas: data.sum(function (n) { return n.mayorToneladas; }),
         mayorProductos: data.sum(function (n) { return n.mayorProductos; }),
         mayorParticipacion: 100,
-        mayorCosto:data.sum(function (n) { return n.mayorCosto; }) 
+        mayorCosto:data.sum(function (n) { return n.mayorCosto; }),
+        menorToneladas: data.sum(function (n) { return n.menorToneladas; }),
+        menorProductos: data.sum(function (n) { return n.menorProductos; }),
+        menorCosto:data.sum(function (n) { return n.menorCosto; }),
+        menorDias1Nal:data.sum(function (n) { return n.menorDias1Nal; }),
+        menorDias2Nal:data.sum(function (n) { return n.menorDias2Nal; }),
+        menorDias1Imp:data.sum(function (n) { return n.menorDias1Imp; }),
+        menorDias2Imp:data.sum(function (n) { return n.menorDias2Imp; }),
+
       };
       return res;
     }

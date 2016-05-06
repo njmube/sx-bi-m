@@ -71,22 +71,17 @@
           <div class="item item-divider text-center"><p>Menor a 6 meses</p></div>
           
           <div class="row item row-linea-header text-right">
-            <div class="col-25">Linea</div>
+            <div class="col-25 text-center">Linea</div>
             <div class="col ">Ton</div>
-            <div class="col">Part</div>
+            <div class="col ">Part</div>
             <div class="col ">Prods</div>
             <div class="col ">Costo</div>
-            <div class="col text-right">Nacional</div>
-            <div class="col text-right">Importado</div>
+            <div class="col col-20  ">Nacional</div>
+            <div class="col col-20  ">Importado</div>
           </div>
           <div class="row item row-linea-sub-header">
-            <div class="col-25"></div>
-            <div class="col "></div>
-            <div class="col"></div>
-            <div class="col "></div>
-            <div class="col "></div>
-            <div class="col text-right"><h6>&lt 1</h6></div>
-            <div class="col text-right"><h6>&lt .5</h6></div>
+            <div class="col col-offset-67 text-right"><h6>&lt 1</h6></div>
+            <div class="col text-right"><h6>&lt 0.5</h6></div>
             <div class="col text-right"><h6>&lt 1</h6></div>
             <div class="col text-right"><h6>&lt .5</h6></div>
           </div>
@@ -122,17 +117,32 @@
           </div>
           
           <div class="item row text-right total" >
-            <div class="col text-left">
+            <div class="col col-25 text-left">
               <p>Total</p>
             </div>
             <div class="col ">
-              <p>{{vm.totales.toneladas | number:0}}</p>
+              <h6> {{vm.totales.menorToneladas | number:2}} </h6>
+            </div>
+            <div class="col ">
+              <h5>{{100}} %</h5>
+            </div>
+            <div class="col ">
+              <h5>{{vm.totales.menorProductos | number:0}}</h5>
             </div>
             <div class="col">
-              <p>{{vm.totales.participacion | number:0}} %</p>
+              <h5>{{vm.totales.menorCosto | number:0}}</h5>
             </div>
-            <div class="col">
-              <p>{{vm.totales.costo | number:0}}</p>
+            <div class="col ">
+              <h6>{{vm.totales.menorDias1Nal | number:0}}</h6>
+            </div>
+            <div class="col ">
+              <h6>{{vm.totales.menorDias2Nal | number:0}}</h6>
+            </div>
+            <div class="col ">
+              <h6>{{vm.totales.menorDias1Imp | number:0}}</h6>
+            </div>
+            <div class="col ">
+              <h6>{{vm.totales.menorDias2Imp | number:0}}</h6>
             </div>
             
           </div>
