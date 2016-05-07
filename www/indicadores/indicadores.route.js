@@ -153,7 +153,41 @@
             
           }
         }
+      })
+
+      .state('papelKpiCxC', {
+        parent: 'papelkpiParent',
+        url: '/inventarios',
+        views: {
+          'indicadores@app': {
+            templateUrl: 'indicadores/papelkpi/cxc/cxckpi-home.html'
+          }
+        }
+      })
+
+      .state('papelKpiCxCAtrasoMax', {
+        parent: 'papelkpiParent',
+        url: '/inventarios',
+        views: {
+          'indicadores@app': {
+            templateUrl: 'indicadores/papelkpi/cxc/cxc-atrasomaximo.html',
+            controller: 'CxcAtrasoMaximoController',
+            controllerAs: 'vm'
+
+          }
+        }
+      })
+      .state('papelKpiCxCJuridico', {
+        parent: 'papelkpiParent',
+        url: '/inventarios',
+        views: {
+          'indicadores@app': {
+            templateUrl: 'indicadores/papelkpi/cxc/cxc-juridico.html'
+
+          }
+        }
       });
+      
 
       //$urlRouterProvider.when('/  papelkpis','/papelkpis/list')
   }

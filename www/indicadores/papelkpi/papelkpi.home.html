@@ -25,8 +25,13 @@
         <i class="icon ion-ios-arrow-forward"></i>
       </ion-item>
 
-      <ion-item ng-click="generateReport(vm.calendario.id)" 
+      <!-- <ion-item ng-click="generateReport(vm.calendario.id)" 
         ng-controller="PapelKpiCxCController as vm2" 
+        class="item-icon-right" > 
+          Cuentas por cobrar  
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item> -->
+      <ion-item ui-sref="papelKpiCxC({calendarioId:vm.calendario.id})" 
         class="item-icon-right" > 
           Cuentas por cobrar  
         <i class="icon ion-ios-arrow-forward"></i>

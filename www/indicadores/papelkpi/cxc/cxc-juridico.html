@@ -1,0 +1,57 @@
+<ion-view>
+  <ion-nav-title><i class="icon ion-social-buffer "></i> Papel BI 1</ion-nav-title>
+  <div class="bar bar-subheader bar-dark">
+    <h1 class="title">
+      Clientes en jurídico :{{vm.calendario.semana}} ({{vm.calendario.fechaFinal | date:'dd/MM/yyyy'}})
+    </h1> 
+    <a ui-sref='papelKpiCxCAtrasoMax' class="button button-clear">Atraso max</a>  
+  </div>
+
+  <ion-content class="has-subheader">
+    <div class="list">
+      <!-- <div class="item item-divider text-center"><p>Clientes con atras</p></div> -->
+     
+      <div class="row  item-divider row-linea-header text-center">
+        <!-- <div class="col">Clave</div> -->
+        <div class="col col-20">Nombre</div>
+        <div class="col">Pzo</div>
+        <div class="col">Línea</div>
+        <div class="col">Facs</div>
+        <div class="col">Atr max</div>
+        <div class="col">Saldo</div>
+        <div class="col">X vencer</div>
+        <div class="col">Vencido</div>
+        <div class="col">1 a 30</div>
+        <div class="col">31 a 60</div>
+        <div class="col">61 a 90</div>
+        <div class="col">&gt90+</div>
+      </div>
+      
+      <div class="item row text-right linea-row text-right" ng-repeat="item in vm.clientes">
+        <div class="col col-20 text-left">
+          <h5>{{item.nombre }} </h5>
+        </div>
+        <div class="col"><h5>{{item.plazo | number:0}}</h5></div>
+        <div class="col"><h5>{{item.lineaCredito | number:0 }}</h5></div>
+        <div class="col"><h5>{{item.facturas | number:0 }}</h5></div>
+        <div class="col"><h5>{{item.atrasoMax | number:0 }}</h5></div>
+        <div class="col"><h5>{{item.saldo | number:0 }}</h5></div>
+        <div class="col"><h5>{{item.porVencer | number:0 }}</h5></div>
+        <div class="col"><h5>{{item.vencido | number:0 }}</h5></div>
+        <div class="col"><h5>{{item.atraso1a30 | number:0 }}</h5></div>
+        <div class="col"><h5>{{item.atraso31a60 | number:0 }}</h5></div>
+        <div class="col"><h5>{{item.atraso61a90 | number:0 }}</h5></div>
+        <div class="col" >
+          <h5 ng-class="{ 'assertive':item.atrasomas91>0}">{{item.atrasomas91 | number:0}}</h5>
+        </div>
+      </div>
+
+    </div>
+  </ion-content>
+
+  
+
+  
+  
+  
+</ion-view>
