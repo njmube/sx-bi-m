@@ -46,36 +46,25 @@
         </div>
       </div>
 
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <!-- <div class="item row text-right total" >
-        <div class="col col-33 text-left">
-          Totales
+      <div class="item row text-right linea-row text-right total" >
+        <div class="col col-20 text-left">
+          <h5>Total</h5>
         </div>
-        <div class="col">
-          <h5>{{vm.margen.deLinea | number:2}}</h5>
+        <div class="col"><h5>{{vm.total.plazo | number:0}}</h5></div>
+        <div class="col"><h5>{{vm.total.lineaCredito | number:0 }}</h5></div>
+        <div class="col"><h5>{{vm.total.facturas | number:0 }}</h5></div>
+        <div class="col"><h5>{{vm.total.atrasoMax | number:0 }}</h5></div>
+        <div class="col"><h5>{{vm.total.saldo | number:0 }}</h5></div>
+        <div class="col"><h5>{{vm.total.porVencer | number:0 }}</h5></div>
+        <div class="col"><h5>{{vm.total.vencido | number:0 }}</h5></div>
+        <div class="col"><h5>{{vm.total.atraso1a30 | number:0 }}</h5></div>
+        <div class="col"><h5>{{vm.total.atraso31a60 | number:0 }}</h5></div>
+        <div class="col"><h5>{{vm.total.atraso61a90 | number:0 }}</h5></div>
+        <div class="col" >
+          <h5 ng-class="{ 'assertive':vm.total.atrasomas91>0}">{{vm.total.atrasomas91  | number:0}}</h5>
         </div>
-        <div class="col ">
-          <h5>{{vm.totales.mayorToneladas | number:2}} </h5>
-        </div>
-        <div class="col ">
-          <h5>{{vm.totales.mayorParticipacion | number:2}} %</h5>
-        </div>
-        <div class="col ">
-          <h5>{{vm.totales.mayorProductos | number:0}}</h5>
-        </div>
-        <div class="col ">
-          <h5>{{vm.totales.mayorCosto | number:0}}</h5>
-        </div>
-      </div> -->
+      </div>
+
     </div>
   </ion-content>
 

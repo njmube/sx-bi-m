@@ -182,7 +182,9 @@
         url: '/inventarios',
         views: {
           'indicadores@app': {
-            templateUrl: 'indicadores/papelkpi/cxc/cxc-juridico.html'
+            templateUrl: 'indicadores/papelkpi/cxc/cxc-juridico.html',
+            controller: 'CxcJuridicoController',
+            controllerAs: 'vm'
 
           }
         }
