@@ -48,9 +48,9 @@
 
       <div class="item row text-right linea-row text-right total" >
         <div class="col col-20 text-left">
-          <h5>Total</h5>
+          <h4>Total</h4>
         </div>
-        <div class="col"><h5>{{vm.total.plazo | number:0}}</h5></div>
+        <div class="col"><h4>{{vm.total.plazo | number:0}}</h4></div>
         <div class="col"><h5>{{vm.total.lineaCredito | number:0 }}</h5></div>
         <div class="col"><h5>{{vm.total.facturas | number:0 }}</h5></div>
         <div class="col"><h5>{{vm.total.atrasoMax | number:0 }}</h5></div>
@@ -65,6 +65,27 @@
         </div>
       </div>
 
+      
+      <div class="item item-divider text-center"><p>Total global </p></div>
+
+      <div class="item row text-right linea-row text-right total" >
+        <div class="col col-20 text-left">
+          <h4>Total de cleintes {{vm.gtotal.atrasoMax}}</h4>
+        </div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"><h4>{{vm.gtotal.saldo | number:0 }}</h4></div>
+        <div class="col"><h4>{{vm.gtotal.porVencer | number:0 }}</h4></div>
+        <div class="col"><h4>{{vm.gtotal.vencido | number:0 }}</h4></div>
+        <div class="col"><h4>{{vm.gtotal.atraso1a30 | number:0 }}</h4></div>
+        <div class="col"><h4>{{vm.gtotal.atraso31a60 | number:0 }}</h4></div>
+        <div class="col"><h4>{{vm.gtotal.atraso61a90 | number:0 }}</h4></div>
+        <div class="col" >
+          <h4 ng-class="{ 'assertive':vm.gtotal.atrasomas91>0}">{{vm.gtotal.atrasomas91  | number:0}}</h4>
+        </div>
+      </div>
     </div>
   </ion-content>
 

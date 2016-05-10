@@ -520,18 +520,42 @@
 	"buffers":
 	[
 		{
-			"file": "www/indicadores/papelkpi/cxc/cxc-atrasomaximo.html",
+			"file": "www/indicadores/papelkpi/cxc/cxc-juridico.html",
 			"settings":
 			{
-				"buffer_size": 3268,
+				"buffer_size": 1785,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "www/indicadores/papelkpi/cxc/cxc-atrasomaximo.js",
+			"file": "www/indicadores/papelkpi/cxc/cxc-juridico-service.js",
 			"settings":
 			{
-				"buffer_size": 1572,
+				"buffer_size": 588,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/index.html",
+			"settings":
+			{
+				"buffer_size": 3712,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/indicadores/papelkpi/cxc/cxc-juridico.js",
+			"settings":
+			{
+				"buffer_size": 882,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/indicadores/indicadores.route.js",
+			"settings":
+			{
+				"buffer_size": 5300,
 				"line_ending": "Unix"
 			}
 		}
@@ -636,11 +660,11 @@
 	],
 	"file_history":
 	[
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/cxc/cxc-atrasomaximo.html",
+		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/cxc/cxc-atrasomaximo.js",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/css/style.css",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/cxc/cxc-juridico.html",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/cxc/cxc-atrasomaximo.html",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/cxc/cxckpi-home.html",
-		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/cxc/cxc-atrasomaximo.js",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/indicadores.route.js",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/indicadores/papelkpi/cxc/cxc-atrasomaximo-service.js",
 		"/Users/rcancino/Projects/siipapx/client/sx-bi-m/www/index.html",
@@ -788,6 +812,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"CxcJuridico",
+			"cxcAtrasoMaximo",
+			"CxcAtrasoMaximo",
+			"cxcAtrasoMaximo",
+			"CxcAtrasoMaximo",
+			"cxcAtrasoMaximo",
+			"CxcAtrasoMaximo",
 			":",
 			",",
 			"0,",
@@ -908,14 +939,7 @@
 			"kpi",
 			"calendario",
 			"Book",
-			"ass",
-			"form",
-			"cannot be null",
-			"can not be null",
-			"can not",
-			"null",
-			"`",
-			"String "
+			"ass"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -938,19 +962,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "www/indicadores/papelkpi/cxc/cxc-atrasomaximo.html",
+					"file": "www/indicadores/papelkpi/cxc/cxc-juridico.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3268,
+						"buffer_size": 1785,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3201,
-								3201
+								1688,
+								1688
 							]
 						],
 						"settings":
@@ -960,7 +984,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 65.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -968,19 +992,111 @@
 				},
 				{
 					"buffer": 1,
-					"file": "www/indicadores/papelkpi/cxc/cxc-atrasomaximo.js",
+					"file": "www/indicadores/papelkpi/cxc/cxc-juridico-service.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1572,
+						"buffer_size": 588,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1507,
-								1518
+								129,
+								129
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2998,
+								2998
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 487.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "www/indicadores/papelkpi/cxc/cxc-juridico.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 882,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								582,
+								582
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "www/indicadores/indicadores.route.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5181,
+								5181
 							]
 						],
 						"settings":
@@ -990,10 +1106,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 229.0,
+						"translation.y": 2270.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

@@ -5,9 +5,9 @@
     .module('sx-bi')
     .controller('CxcAtrasoMaximoController' ,CxcAtrasoMaximoController);
 
-    CxcAtrasoMaximoController.$inject = ['$log', 'calendario', 'cxcAtrasoMaximo'];
+    CxcAtrasoMaximoController.$inject = ['$log', 'calendario', 'cxcAtrasoMaximo','ClienteAtrasoMax'];
 
-    function CxcAtrasoMaximoController ($log, calendario, cxcAtrasoMaximo) {
+    function CxcAtrasoMaximoController ($log, calendario, cxcAtrasoMaximo,ClienteAtrasoMax) {
       var vm = this;
       vm.calendario = calendario;
 
@@ -26,6 +26,13 @@
           $log.info('Error cargando clientes con atraso maximo....');
           
         });
+
+        vm.gtotal = ClienteAtrasoMax
+        .findByCalendario({
+          calendarioId:calendario.id,
+          clave: 'TOTAL'
+        });
+
       }
 
       function getTotal (rows) {
@@ -46,7 +53,7 @@
           res.saldo+= item.saldo;
           res.porVencer+= item.porVencer;
           res.vencido+= item.vencido;
-          res.atraso1a30+= item.astraso1a30;
+          res.atraso1a30+= item.atraso1a30;
           res.atraso31a60+= item.atraso31a60;
           res.atraso61a90+= item.atraso61a90;
           res.atrasomas91+= item.atrasomas91;
